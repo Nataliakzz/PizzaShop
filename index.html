@@ -9,8 +9,8 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <a href=""> pizzashop </a>
+        <nav aria-label="Main navigation">
+          <a href="/" aria-label="Go to homepage">pizzashop</a>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Menu</a></li>
@@ -19,9 +19,11 @@
           </ul>
         </nav>
         <button type="button">Log in</button>
-        <svg>
-          <use href="./images/sprite.svg#icon-shopping-cart"></use>
-        </svg>
+        <button type="button" aria-label="Open shopping cart">
+          <svg>
+            <use href="./images/sprite.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -39,7 +41,7 @@
             </h1>
             <p>
               We will deliver juicy pizza for your family in 30 minutes, if the
-              courier is late - <span>pizza is free</span>!
+              courier is late - <span aria-live="polite">pizza is free</span>!
             </p>
             <p>Cooking process:</p>
             <iframe
@@ -50,14 +52,16 @@
               loading="lazy"
               allowfullscreen
             ></iframe>
-            <div>
+            <div role="group">
               <button>To order</button>
               <button>Pizza-Menu</button>
             </div>
           </div>
           <img
-            src="./images/photo-of-pizza-with-sauces-on-an-orange-background.jpg"
+            src="./images/photo-of-pizza-with-sauces-on-an-orange-background.webp"
             alt="Photo of pizza with sauces on an orange background"
+            aria-hidden="true"
+            loading="lazy"
           />
         </div>
       </section>
@@ -75,108 +79,368 @@
           </nav>
           <ul>
             <li>
-              <img
-                src="./images/italian-pizza.webp"
-                alt="Photo italian pizza"
-              />
-              <h3>Italian</h3>
-              <p>
-                Filling: tomato sauce, olives, champignons, bell pepper,
-                chicken, pineapples
-              </p>
-              <ul>
-                <li>22</li>
-                <li>28</li>
-                <li>33</li>
-              </ul>
-              <button type="button"></button>
-              <div>
-                <p></p>
-                <button type="button"></button>
-                <input type="number" min="1" max="10" step="1" />
-                <button type="button"></button>
-              </div>
-              <button type="button"></button>
+              <article>
+                <img
+                  src="./images/italian-pizza.webp"
+                  alt="Photo of Italian pizza"
+                  loading="lazy"
+                />
+                <h3>Italian</h3>
+                <p>
+                  Filling: tomato sauce, olives, champignons, bell pepper,
+                  chicken, pineapples
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
             </li>
             <li>
-              <img src="./images/venice-pizza.webp" alt="Photo venice pizza" />
-              <h3>Venecia</h3>
-              <p>
-                Filling: tomato sauce, pickled onion, chicken, tomatos, hunting
-                sausages, parsley,
-              </p>
-              <ul>
-                <li>22</li>
-                <li>28</li>
-                <li>33</li>
-              </ul>
-              <button type="button"></button>
-              <div>
-                <p></p>
-                <button type="button"></button>
-                <input type="number" min="1" max="10" step="1" />
-                <button type="button"></button>
-              </div>
-              <button type="button"></button>
+              <article>
+                <img
+                  loading="lazy"
+                  src="./images/venice-pizza.webp"
+                  alt="Photo of Venice pizza"
+                />
+                <h3>Venecia</h3>
+                <p>
+                  Filling: tomato sauce, pickled onion, chicken, tomatos,
+                  hunting sausages, parsley,
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>7,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
             </li>
             <li>
-              <img
-                src="./images/pepperoni-pizza.webp"
-                alt="Photo pepperoni pizza"
-              />
-              <h3>Pepperoni</h3>
-              <p>
-                Filling: pesto sauce, tomato sauce, salami, bacon, veal,
-                mozzarella
-              </p>
-              <ul>
-                <li>22</li>
-                <li>28</li>
-                <li>33</li>
-              </ul>
-              <button type="button"></button>
-              <div>
-                <p></p>
-                <button type="button"></button>
-                <input type="number" min="1" max="10" step="1" />
-                <button type="button"></button>
-              </div>
-              <button type="button"></button>
+              <article>
+                <img
+                  loading="lazy"
+                  src="./images/pepperoni-pizza.webp"
+                  alt="Photo of pepperoni pizza"
+                />
+                <h3>Pepperoni</h3>
+                <p>
+                  Filling: pesto sauce, tomato sauce, salami, bacon, veal,
+                  mozzarella
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>9,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
             </li>
             <li>
-              <img src="./images/cheese-pizza.webp" alt="Photo cheese pizza" />
-              <h3>Cheese</h3>
-              <p>
-                Filling: cream sauce, mozzarella, cheddar, parmesan, dorblu,
-                basil
-              </p>
-              <ul>
-                <li>22</li>
-                <li>28</li>
-                <li>33</li>
-              </ul>
-              <button type="button"></button>
-              <div>
-                <p></p>
-                <button type="button"></button>
-                <input type="number" min="1" max="10" step="1" />
-                <button type="button"></button>
-              </div>
-              <button type="button"></button>
+              <article>
+                <img
+                  loading="lazy"
+                  src="./images/cheese-pizza.webp"
+                  alt="Photo of cheese pizza"
+                />
+                <h3>Cheese</h3>
+                <p>
+                  Filling: cream sauce, mozzarella, cheddar, parmesan, dorblu,
+                  basil
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
             </li>
           </ul>
         </div>
       </section>
       <section>
-        <div class="container"></div>
+        <div class="container">
+          <h2>Most popular pizza</h2>
+          <ul>
+            <li>
+              <article>
+                <img
+                  src="./images/argentinian-pizza.webp"
+                  alt="Photo of Argentinian pizza"
+                  loading="lazy"
+                />
+                <h3>Argentina</h3>
+                <p>
+                  Filling: tomato sauce, bell pepper, mozzarella, black olives,
+                  pickled cucumber, pickled onion, basil leaves
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
+            </li>
+            <li>
+              <article>
+                <img
+                  src="./images/mushroom-pizza.webp"
+                  alt="Photo of mushroom pizza"
+                  loading="lazy"
+                />
+                <h3>X2 Mushrooms</h3>
+                <p>
+                  Filling: tomato sauce, bell pepper, tomatoes, parmesan,
+                  olives, champignons X2, basil leaves
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
+            </li>
+            <li>
+              <article>
+                <img
+                  src="./images/tomato-pizza.webp"
+                  alt="Photo of tomato pizza"
+                  loading="lazy"
+                />
+                <h3>Tomato</h3>
+                <p>
+                  Filling: tomato sauce, bell pepper, tomatoes, mozzarella,
+                  parmesan, olives, mushrooms
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
+            </li>
+            <li>
+              <article>
+                <img
+                  src="./images/vegetarian-pizza.webp"
+                  alt="Photo of vegetarian pizza"
+                  loading="lazy"
+                />
+                <h3>Vegetarian</h3>
+                <p>
+                  Filling: tomato sauce, bell pepper, tomatoes, mushrooms,
+                  broccoli, celery
+                </p>
+                <ul aria-label="Pizza sizes">
+                  <li>22</li>
+                  <li>28</li>
+                  <li>33</li>
+                </ul>
+                <button type="button">+ Ingredients</button>
+                <div>
+                  <p>8,35</p>
+                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button type="button" aria-label="Add one pizza">+</button>
+                </div>
+                <button type="button">Order Now</button>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
       <section>
-        <div class="container"></div>
+        <div>
+          <h2>Events</h2>
+          <p>
+            There are regular events in our pizzeria that will allow you to eat
+            delicious food for a lower price!
+          </p>
+        </div>
+        <div class="container">
+          <article>
+            <h3>How we cooking</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Our blog</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Two pizza for 1 price</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Kitchen tour</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Free coffee for 3 pizza</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Our instagram</h3>
+            <a href="#">More</a>
+          </article>
+          <article>
+            <h3>Where are you choose us?</h3>
+            <a href="#">More</a>
+          </article>
+        </div>
       </section>
       <section>
-        <div class="container"></div>
+        <div class="container">
+          <div>
+            <h2>About us</h2>
+            <p>
+              In just a couple of years, we have opened 6 outlets in different
+              cities: Kazan, Chelyabinsk, Ufa, Samara, Izhevsk, and in the
+              future we plan to develop the network in other major cities of
+              Russia.
+            </p>
+            <div>
+              <img
+                src="./images/argentinian-pizza.webp"
+                alt="Photo of Argentinian pizza"
+                aria-hidden="true"
+              />
+              <img
+                src="./images/venice-pizza.webp"
+                alt="Photo of Venice pizza"
+                aria-hidden="true"
+              />
+              <img
+                src="./images/vegetarian-pizza.webp"
+                alt="Photo of vegetarian pizza"
+                aria-hidden="true"
+              />
+            </div>
+            <p>
+              The kitchen of each point is at least: 400-500 sq. m. meters,
+              hundreds of employees, smoothly performing work in order to
+              receive / prepare / form / deliver customer orders on time.
+            </p>
+          </div>
+          <img
+            src="./images/pizza-on-a-black-wooden-table.webp"
+            alt="Pizza on a black wooden table"
+            aria-hidden="true"
+          />
+        </div>
       </section>
     </main>
-    <footer><div class="container"></div></footer>
+    <footer>
+      <div class="container">
+        <nav>
+          <a href="/" aria-label="Go to homepage">pizzashop</a>
+          <div>
+            <h4>Home</h4>
+            <ul>
+              <li><a href="#">To Order</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Menu</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Events</h4>
+            <ul>
+              <li><a href="#">3 Pizza 1 Free Coffee</a></li>
+              <li><a href="#">2 Pizza for 1 Price</a></li>
+              <li><a href="#">Kitchen Tour</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#">Show All</a></li>
+              <li><a href="#">Seaproducts</a></li>
+              <li><a href="#">Vegan</a></li>
+              <li><a href="#">Meat</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">Our History</a></li>
+              <li><a href="#">Why We?</a></li>
+            </ul>
+          </div>
+        </nav>
+        <address>
+          <a href="tel:+380000000000">+38 (000) 000 00 00</a>
+          <a href="#" aria-label="Instagram">
+            <svg>
+              <use href="./images/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg>
+              <use href="./images/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg>
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </address>
+      </div>
+    </footer>
   </body>
 </html>
