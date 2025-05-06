@@ -20,13 +20,16 @@
 }
 
 * {
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
     height: 100%;
+    font-family: 'Muller';
+    font-weight: 400;
+    font-size: 14px;
 }
 
 img,
@@ -39,13 +42,212 @@ svg {
 
 button {
     cursor: pointer;
+    font-family: 'Muller';
+    font-weight: 500;         /*поставити 400 в картках піц на розмірах інградієнтах і "+" "-" */
 }
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 ul,
 ol {
     list-style: none;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 42px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 26px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 34px;
+}
+
+.container {
+    padding: 0 80px;
+}
+
+.header-container {
+    display: flex;
+}
+
+.header-navigation {
+    display: flex;
+}
+
+.header-navigation-list {
+    display: flex;
+}
+
+.header__log-in-button {
+    font-size: 16px;
+}
+
+.header-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.main-section__container {
+    display: flex;
+}
+
+.main-section__title {
+    font-size: 70px;
+    display: flex;
+}
+
+.main-section__title-image {
+    width: 48px;
+    height: 84px;
+}
+
+.main-section__button-container .active {
+    font-size: 22px;
+}
+
+.main-section__button-container {
+    font-size: 20px;
+}
+
+.main-section__image {
+    width: 456px;
+    height: 684px;
+}
+
+.menu-section__navigation-list {
+    display: flex;
+}
+
+.menu-section__navigation-button {
+    font-size: 22px;
+}
+
+.pizza-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pizza-card__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis:calc(25% - 12px) ;
+}
+
+.pizza-card__image {
+    width: 160px;
+    height: 158px;
+}
+
+.pizza-card__button-pizza-size {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.pizza-card__button-add-ingredients {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.pizza-card__price {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.pizza-card__button-pizza-count {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.pizza-card__button-order-pizza {
+    font-size: 18px;
+}
+
+.events-section__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 24px;
+    grid-template-areas:
+        "card2  card2  card3  card3  title  title"
+        "card4  card4  card4  card5  card5  card5"
+        "card6  card6  card7  card7  card8  card8";
+}
+.events-section__container > :nth-child(1) {
+    grid-area: title;
+}
+.events-section__container > :nth-child(2) {
+    grid-area: card2;
+}
+.events-section__container > :nth-child(3) {
+    grid-area: card3;
+}
+.events-section__container > :nth-child(4) {
+    grid-area: card4;
+}
+.events-section__container > :nth-child(5) {
+    grid-area: card5;
+}
+.events-section__container > :nth-child(6) {
+    grid-area: card6;
+}
+.events-section__container > :nth-child(7) {
+    grid-area: card7;
+}
+.events-section__container > :nth-child(8) {
+    grid-area: card8;
+}
+
+.events-section__button {
+    font-weight: 500px;
+    font-size: 16px;
+}
+
+.about-us-section__container {
+    display: flex;
+}
+
+.about-us-section__decor-pizza-container-image {
+    display: flex;
+}
+
+.about-us-section__decor-pizza-image {
+    width: 146px;
+    height: 146px;
+}
+
+.about-us-section__main-image {
+    width: 566px;
+    height: 420px;
+}
+
+.footer-navigation {
+    display: flex;
+}
+
+.footer-phone {
+    font-size: 18px;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
 }

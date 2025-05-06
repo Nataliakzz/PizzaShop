@@ -8,19 +8,19 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <nav aria-label="Main navigation">
-          <a href="/" aria-label="Go to homepage">pizzashop</a>
-          <ul>
+      <div class="container header-container">
+        <nav class="header-navigation" aria-label="Main navigation">
+          <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
+          <ul class="header-navigation-list">
             <li><a href="#">Home</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">About us</a></li>
           </ul>
         </nav>
-        <button type="button">Log in</button>
+        <button class="header__log-in-button" type="button">Log in</button>
         <button type="button" aria-label="Open shopping cart">
-          <svg>
+          <svg class="header-icon">
             <use href="./images/sprite.svg#icon-shopping-cart"></use>
           </svg>
         </button>
@@ -28,12 +28,16 @@
     </header>
     <main>
       <section>
-        <div class="container">
+        <div class="container main-section__container">
           <div>
-            <h1>
+            <h1 class="main-section__title">
               The Fastest Pizza
               <!-- Поставити пробіл -->
-              <svg aria-hidden="true" focusable="false">
+              <svg
+                class="main-section__title-image"
+                aria-hidden="true"
+                focusable="false"
+              >
                 <use href="./images/sprite.svg#icon-flash"></use>
                 <!-- Видалити зайві свг іконки блискавок -->
               </svg>
@@ -52,12 +56,13 @@
               loading="lazy"
               allowfullscreen
             ></iframe>
-            <div role="group">
-              <button>To order</button>
-              <button>Pizza-Menu</button>
+            <div class="main-section__button-container" role="group">
+              <button class="active" type="button">To order</button>
+              <button type="button">Pizza-Menu</button>
             </div>
           </div>
           <img
+            class="main-section__image"
             src="./images/photo-of-pizza-with-sauces-on-an-orange-background.webp"
             alt="Photo of pizza with sauces on an orange background"
             aria-hidden="true"
@@ -69,18 +74,39 @@
         <div class="container">
           <h2>Menu</h2>
           <nav>
-            <ul>
-              <li><a href="#"> Show All </a></li>
-              <li><a href="#"> Meat </a></li>
-              <li><a href="#"> Vegetarian </a></li>
-              <li><a href="#"> Sea products </a></li>
-              <li><a href="#"> Mushroom </a></li>
+            <ul class="menu-section__navigation-list">
+              <li>
+                <button class="menu-section__navigation-button" type="button">
+                  Show All
+                </button>
+              </li>
+              <li>
+                <button class="menu-section__navigation-button" type="button">
+                  Meat
+                </button>
+              </li>
+              <li>
+                <button class="menu-section__navigation-button" type="button">
+                  Vegetarian
+                </button>
+              </li>
+              <li>
+                <button class="menu-section__navigation-button" type="button">
+                  Sea products
+                </button>
+              </li>
+              <li>
+                <button class="menu-section__navigation-button" type="button">
+                  Mushroom
+                </button>
+              </li>
             </ul>
           </nav>
-          <ul>
-            <li>
+          <ul class="pizza-card__list">
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   src="./images/italian-pizza.webp"
                   alt="Photo of Italian pizza"
                   loading="lazy"
@@ -91,23 +117,67 @@
                   chicken, pineapples
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">8,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   loading="lazy"
                   src="./images/venice-pizza.webp"
                   alt="Photo of Venice pizza"
@@ -118,23 +188,67 @@
                   hunting sausages, parsley,
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>7,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">7,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   loading="lazy"
                   src="./images/pepperoni-pizza.webp"
                   alt="Photo of pepperoni pizza"
@@ -145,23 +259,67 @@
                   mozzarella
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>9,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">9,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   loading="lazy"
                   src="./images/cheese-pizza.webp"
                   alt="Photo of cheese pizza"
@@ -172,18 +330,61 @@
                   basil
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">6,75</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
           </ul>
@@ -192,10 +393,11 @@
       <section>
         <div class="container">
           <h2>Most popular pizza</h2>
-          <ul>
-            <li>
+          <ul class="pizza-card__list">
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   src="./images/argentinian-pizza.webp"
                   alt="Photo of Argentinian pizza"
                   loading="lazy"
@@ -206,23 +408,67 @@
                   pickled cucumber, pickled onion, basil leaves
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">9,74</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   src="./images/mushroom-pizza.webp"
                   alt="Photo of mushroom pizza"
                   loading="lazy"
@@ -233,23 +479,67 @@
                   olives, champignons X2, basil leaves
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">8,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   src="./images/tomato-pizza.webp"
                   alt="Photo of tomato pizza"
                   loading="lazy"
@@ -260,23 +550,67 @@
                   parmesan, olives, mushrooms
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">8,75</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
-            <li>
+            <li class="pizza-card__item">
               <article>
                 <img
+                  class="pizza-card__image"
                   src="./images/vegetarian-pizza.webp"
                   alt="Photo of vegetarian pizza"
                   loading="lazy"
@@ -287,64 +621,107 @@
                   broccoli, celery
                 </p>
                 <ul aria-label="Pizza sizes">
-                  <li>22</li>
-                  <li>28</li>
-                  <li>33</li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
                 </ul>
-                <button type="button">+ Ingredients</button>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
                 <div>
-                  <p>8,35</p>
-                  <button type="button" aria-label="Remove one pizza">-</button>
+                  <p class="pizza-card__price">11,59</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
                   <input type="number" min="1" max="10" step="1" />
-                  <button type="button" aria-label="Add one pizza">+</button>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
                 </div>
-                <button type="button">Order Now</button>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
               </article>
             </li>
           </ul>
         </div>
       </section>
       <section>
-        <div>
-          <h2>Events</h2>
-          <p>
-            There are regular events in our pizzeria that will allow you to eat
-            delicious food for a lower price!
-          </p>
-        </div>
-        <div class="container">
+        <div class="container events-section__container">
+          <div>
+            <h2>Events</h2>
+            <p>
+              There are regular events in our pizzeria that will allow you to
+              eat delicious food for a lower price!
+            </p>
+          </div>
           <article>
             <h3>How we cooking</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Our blog</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Two pizza for 1 price</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Kitchen tour</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Free coffee for 3 pizza</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Our instagram</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
           <article>
             <h3>Where are you choose us?</h3>
-            <a href="#">More</a>
+            <a class="events-section__button" href="#">More</a>
           </article>
         </div>
       </section>
       <section>
-        <div class="container">
+        <div class="container about-us-section__container">
           <div>
             <h2>About us</h2>
             <p>
@@ -353,18 +730,21 @@
               future we plan to develop the network in other major cities of
               Russia.
             </p>
-            <div>
+            <div class="about-us-section__decor-pizza-container-image">
               <img
+                class="about-us-section__decor-pizza-image"
                 src="./images/argentinian-pizza.webp"
                 alt="Photo of Argentinian pizza"
                 aria-hidden="true"
               />
               <img
+                class="about-us-section__decor-pizza-image"
                 src="./images/venice-pizza.webp"
                 alt="Photo of Venice pizza"
                 aria-hidden="true"
               />
               <img
+                class="about-us-section__decor-pizza-image"
                 src="./images/vegetarian-pizza.webp"
                 alt="Photo of vegetarian pizza"
                 aria-hidden="true"
@@ -377,6 +757,7 @@
             </p>
           </div>
           <img
+            class="about-us-section__main-image"
             src="./images/pizza-on-a-black-wooden-table.webp"
             alt="Pizza on a black wooden table"
             aria-hidden="true"
@@ -386,8 +767,8 @@
     </main>
     <footer>
       <div class="container">
-        <nav>
-          <a href="/" aria-label="Go to homepage">pizzashop</a>
+        <nav class="footer-navigation">
+          <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
           <div>
             <h4>Home</h4>
             <ul>
@@ -423,19 +804,21 @@
           </div>
         </nav>
         <address>
-          <a href="tel:+380000000000">+38 (000) 000 00 00</a>
+          <a class="footer-phone" href="tel:+380000000000"
+            >+38 (000) 000 00 00</a
+          >
           <a href="#" aria-label="Instagram">
-            <svg>
+            <svg class="footer-icon">
               <use href="./images/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
           <a href="#" aria-label="Twitter">
-            <svg>
+            <svg class="footer-icon">
               <use href="./images/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
           <a href="#" aria-label="Facebook">
-            <svg>
+            <svg class="footer-icon">
               <use href="./images/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
