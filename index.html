@@ -27,21 +27,23 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="main-section">
         <div class="container main-section__container">
           <div>
             <h1 class="main-section__title">
-              The Fastest Pizza
-              <!-- Поставити пробіл -->
-              <svg
-                class="main-section__title-image"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="./images/sprite.svg#icon-flash"></use>
-                <!-- Видалити зайві свг іконки блискавок -->
-              </svg>
-              Delivery
+              The Fastest<br />
+              <div>
+                Pizza
+                <svg
+                  class="main-section__title-image"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="./images/sprite.svg#icon-flash"></use>
+                  <!-- Видалити зайві свг іконки блискавок -->
+                </svg>
+                Delivery
+              </div>
             </h1>
             <p>
               We will deliver juicy pizza for your family in 30 minutes, if the
@@ -49,6 +51,7 @@
             </p>
             <p>Cooking process:</p>
             <iframe
+              class="main-section__video"
               src="https://www.youtube.com/embed/sv3TXMSv6Lw?si=Jvf4eAfRAPmt5H_o"
               title="Homemade pizza"
               allow="encrypted-media; picture-in-picture;"
@@ -72,7 +75,7 @@
       </section>
       <section>
         <div class="container">
-          <h2>Menu</h2>
+          <h2 class="menu-section__title">Menu</h2>
           <nav>
             <ul class="menu-section__navigation-list">
               <li>
@@ -116,7 +119,10 @@
                   Filling: tomato sauce, olives, champignons, bell pepper,
                   chicken, pineapples
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -151,7 +157,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">8,35</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -187,7 +193,10 @@
                   Filling: tomato sauce, pickled onion, chicken, tomatos,
                   hunting sausages, parsley,
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -222,7 +231,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">7,35</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -258,7 +267,10 @@
                   Filling: pesto sauce, tomato sauce, salami, bacon, veal,
                   mozzarella
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -293,7 +305,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">9,35</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -329,7 +341,10 @@
                   Filling: cream sauce, mozzarella, cheddar, parmesan, dorblu,
                   basil
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -364,7 +379,451 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">6,75</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  src="./images/italian-pizza.webp"
+                  alt="Photo of Italian pizza"
+                  loading="lazy"
+                />
+                <h3>Italian</h3>
+                <p>
+                  Filling: tomato sauce, olives, champignons, bell pepper,
+                  chicken, pineapples
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">8,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  loading="lazy"
+                  src="./images/venice-pizza.webp"
+                  alt="Photo of Venice pizza"
+                />
+                <h3>Venecia</h3>
+                <p>
+                  Filling: tomato sauce, pickled onion, chicken, tomatos,
+                  hunting sausages, parsley,
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">7,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  loading="lazy"
+                  src="./images/pepperoni-pizza.webp"
+                  alt="Photo of pepperoni pizza"
+                />
+                <h3>Pepperoni</h3>
+                <p>
+                  Filling: pesto sauce, tomato sauce, salami, bacon, veal,
+                  mozzarella
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">9,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  loading="lazy"
+                  src="./images/cheese-pizza.webp"
+                  alt="Photo of cheese pizza"
+                />
+                <h3>Cheese</h3>
+                <p>
+                  Filling: cream sauce, mozzarella, cheddar, parmesan, dorblu,
+                  basil
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">6,75</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  loading="lazy"
+                  src="./images/pepperoni-pizza.webp"
+                  alt="Photo of pepperoni pizza"
+                />
+                <h3>Pepperoni</h3>
+                <p>
+                  Filling: pesto sauce, tomato sauce, salami, bacon, veal,
+                  mozzarella
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
+                  <p class="pizza-card__price">9,35</p>
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Remove one pizza"
+                  >
+                    -
+                  </button>
+                  <input type="number" min="1" max="10" step="1" />
+                  <button
+                    class="pizza-card__button-pizza-count"
+                    type="button"
+                    aria-label="Add one pizza"
+                  >
+                    +
+                  </button>
+                </div>
+                <button class="pizza-card__button-order-pizza" type="button">
+                  Order Now
+                </button>
+              </article>
+            </li>
+            <li class="pizza-card__item">
+              <article>
+                <img
+                  class="pizza-card__image"
+                  loading="lazy"
+                  src="./images/cheese-pizza.webp"
+                  alt="Photo of cheese pizza"
+                />
+                <h3>Cheese</h3>
+                <p>
+                  Filling: cream sauce, mozzarella, cheddar, parmesan, dorblu,
+                  basil
+                </p>
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="22 centimeters"
+                    >
+                      22
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="28 centimeters"
+                    >
+                      28
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="pizza-card__button-pizza-size"
+                      type="button"
+                      aria-label="33 centimeters"
+                    >
+                      33
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="pizza-card__button-add-ingredients"
+                  type="button"
+                >
+                  + Ingredients
+                </button>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">6,75</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -392,7 +851,7 @@
       </section>
       <section>
         <div class="container">
-          <h2>Most popular pizza</h2>
+          <h2 class="popular-pizza-section__title">Most popular pizza</h2>
           <ul class="pizza-card__list">
             <li class="pizza-card__item">
               <article>
@@ -407,7 +866,10 @@
                   Filling: tomato sauce, bell pepper, mozzarella, black olives,
                   pickled cucumber, pickled onion, basil leaves
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -442,7 +904,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">9,74</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -478,7 +940,10 @@
                   Filling: tomato sauce, bell pepper, tomatoes, parmesan,
                   olives, champignons X2, basil leaves
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -513,7 +978,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">8,35</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -549,7 +1014,10 @@
                   Filling: tomato sauce, bell pepper, tomatoes, mozzarella,
                   parmesan, olives, mushrooms
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -584,7 +1052,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">8,75</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -620,7 +1088,10 @@
                   Filling: tomato sauce, bell pepper, tomatoes, mushrooms,
                   broccoli, celery
                 </p>
-                <ul aria-label="Pizza sizes">
+                <ul
+                  class="pizza-card__pizza-sizes-list"
+                  aria-label="Pizza sizes"
+                >
                   <li>
                     <button
                       class="pizza-card__button-pizza-size"
@@ -655,7 +1126,7 @@
                 >
                   + Ingredients
                 </button>
-                <div>
+                <div class="pizza-card__count-container">
                   <p class="pizza-card__price">11,59</p>
                   <button
                     class="pizza-card__button-pizza-count"
@@ -683,7 +1154,7 @@
       </section>
       <section>
         <div class="container events-section__container">
-          <div>
+          <div class="events-section__title-container">
             <h2>Events</h2>
             <p>
               There are regular events in our pizzeria that will allow you to
@@ -724,11 +1195,10 @@
         <div class="container about-us-section__container">
           <div>
             <h2>About us</h2>
-            <p>
-              In just a couple of years, we have opened 6 outlets in different
-              cities: Kazan, Chelyabinsk, Ufa, Samara, Izhevsk, and in the
-              future we plan to develop the network in other major cities of
-              Russia.
+            <p class="about-us-section__text">
+              In just a couple of years, we have opened 6 points in different
+              cities: Kyiv, Chernivtsi, Kharkiv, Sumy, Irpin, and in the future
+              we plan to develop the network in other large cities of Ukraine.
             </p>
             <div class="about-us-section__decor-pizza-container-image">
               <img
@@ -750,7 +1220,7 @@
                 aria-hidden="true"
               />
             </div>
-            <p>
+            <p class="about-us-section__text">
               The kitchen of each point is at least: 400-500 sq. m. meters,
               hundreds of employees, smoothly performing work in order to
               receive / prepare / form / deliver customer orders on time.
@@ -767,9 +1237,9 @@
     </main>
     <footer>
       <div class="container">
-        <nav class="footer-navigation">
+        <nav class="footer__navigation">
           <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
-          <div>
+          <div class="footer__navigation-column">
             <h4>Home</h4>
             <ul>
               <li><a href="#">To Order</a></li>
@@ -778,7 +1248,7 @@
               <li><a href="#">Menu</a></li>
             </ul>
           </div>
-          <div>
+          <div class="footer__navigation-column">
             <h4>Events</h4>
             <ul>
               <li><a href="#">3 Pizza 1 Free Coffee</a></li>
@@ -786,7 +1256,7 @@
               <li><a href="#">Kitchen Tour</a></li>
             </ul>
           </div>
-          <div>
+          <div class="footer__navigation-column">
             <h4>Menu</h4>
             <ul>
               <li><a href="#">Show All</a></li>
@@ -795,7 +1265,7 @@
               <li><a href="#">Meat</a></li>
             </ul>
           </div>
-          <div>
+          <div class="footer__navigation-column">
             <h4>About Us</h4>
             <ul>
               <li><a href="#">Our History</a></li>
@@ -803,25 +1273,27 @@
             </ul>
           </div>
         </nav>
-        <address>
-          <a class="footer-phone" href="tel:+380000000000"
+        <address class="footer__address">
+          <a class="footer__phone" href="tel:+380000000000"
             >+38 (000) 000 00 00</a
           >
-          <a href="#" aria-label="Instagram">
-            <svg class="footer-icon">
-              <use href="./images/sprite.svg#icon-instagram"></use>
-            </svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg class="footer-icon">
-              <use href="./images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg class="footer-icon">
-              <use href="./images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
+          <div class="footer__icon-container">
+            <a href="#" aria-label="Instagram">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </div>
         </address>
       </div>
     </footer>

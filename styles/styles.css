@@ -30,6 +30,9 @@ body {
     font-family: 'Muller';
     font-weight: 400;
     font-size: 14px;
+    line-height: 1.5;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 img,
@@ -58,16 +61,19 @@ ol {
 
 h1 {
     font-weight: 800;
+    line-height: 1;
 }
 
 h2 {
     font-weight: 800;
     font-size: 42px;
+    line-height: 1.2;
 }
 
 h3 {
     font-weight: 500;
     font-size: 26px;
+    line-height: 1.1;
 }
 
 h4 {
@@ -86,18 +92,25 @@ h4 {
 
 .header-container {
     display: flex;
+    align-items: center;
 }
 
 .header-navigation {
     display: flex;
+    flex-grow: 1;
+    align-items: center;
 }
 
 .header-navigation-list {
+    font-size: 16px;
     display: flex;
+    gap: 70px;
+    margin: 0 auto;
 }
 
 .header__log-in-button {
     font-size: 16px;
+    margin-right: 24px;
 }
 
 .header-icon {
@@ -105,18 +118,33 @@ h4 {
     height: 28px;
 }
 
+.main-section p {
+    max-width: 300px;
+}
+
 .main-section__container {
     display: flex;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .main-section__title {
     font-size: 70px;
+}
+
+.main-section__title div {
     display: flex;
 }
 
 .main-section__title-image {
     width: 48px;
     height: 84px;
+}
+
+.main-section__video {
+    height: 200px;
+    border-radius: 24px;
+    border: none;
 }
 
 .main-section__button-container .active {
@@ -130,10 +158,17 @@ h4 {
 .main-section__image {
     width: 456px;
     height: 684px;
+    border-radius: 46px;
+}
+
+.menu-section__title {
+    text-align: center;
 }
 
 .menu-section__navigation-list {
     display: flex;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .menu-section__navigation-button {
@@ -141,20 +176,30 @@ h4 {
 }
 
 .pizza-card__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    gap: 22px; 
 }
 
 .pizza-card__item {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis:calc(25% - 12px) ;
+    width: 300px;
+    
+}
+
+.pizza-card__item article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pizza-card__image {
     width: 160px;
     height: 158px;
+}
+
+.pizza-card__pizza-sizes-list {
+    display: flex;
 }
 
 .pizza-card__button-pizza-size {
@@ -165,6 +210,10 @@ h4 {
 .pizza-card__button-add-ingredients {
     font-weight: 400;
     font-size: 16px;
+}
+
+.pizza-card__count-container {
+    display: flex;
 }
 
 .pizza-card__price {
@@ -179,6 +228,12 @@ h4 {
 
 .pizza-card__button-order-pizza {
     font-size: 18px;
+}
+
+.popular-pizza-section__title {
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .events-section__container {
@@ -216,6 +271,17 @@ h4 {
     grid-area: card8;
 }
 
+.events-section__container h3 {
+    text-transform: uppercase;
+    max-width: 200px;
+}
+
+.events-section__title-container {
+    text-align: end;
+    max-width: 330px;
+    justify-self: end;
+}
+
 .events-section__button {
     font-weight: 500px;
     font-size: 16px;
@@ -223,6 +289,10 @@ h4 {
 
 .about-us-section__container {
     display: flex;
+}
+
+.about-us-section__text {
+    max-width: 430px;
 }
 
 .about-us-section__decor-pizza-container-image {
@@ -236,18 +306,33 @@ h4 {
 
 .about-us-section__main-image {
     width: 566px;
-    height: 420px;
+    height: 390px;
 }
 
-.footer-navigation {
+.footer__navigation {
     display: flex;
+    gap: 24px;
 }
 
-.footer-phone {
+.footer__navigation-column {
+    flex-grow: 1;
+}
+
+.footer__address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__phone {
     font-size: 18px;
 }
 
-.footer-icon {
+.footer__icon-container {
+    display: flex;
+    gap: 8px;
+}
+
+.footer__icon {
     width: 24px;
     height: 24px;
 }
