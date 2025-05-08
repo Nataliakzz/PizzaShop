@@ -19,6 +19,10 @@
     src: url('../fonts/MullerExtraBold.woff2') format('woff2');
 }
 
+:root {
+    --main-gradient: linear-gradient(to right, #FE9C1C 0%, #FE9C1C 35%, #FF5D29 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +50,13 @@ svg {
 button {
     cursor: pointer;
     font-family: 'Muller';
-    font-weight: 500;         /*поставити 400 в картках піц на розмірах інградієнтах і "+" "-" */
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+}
+
+button.active {
+    border: none;
 }
 
 a {
@@ -81,9 +91,16 @@ h4 {
     font-size: 18px;
 }
 
+.active {
+    background-image: var(--main-gradient);
+}
+
 .logo {
     font-weight: 800;
     font-size: 34px;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -111,11 +128,20 @@ h4 {
 .header__log-in-button {
     font-size: 16px;
     margin-right: 24px;
+    padding: 8px 48px;
+    border-radius: 12px;
+    background-image: var(--main-gradient);
+}
+
+.header__cart-button {
+    padding: 8px;
+    background-image: var(--main-gradient);
+    border-radius: 12px;
 }
 
 .header-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 }
 
 section {
@@ -162,12 +188,13 @@ section {
     margin-bottom: 20px;
 }
 
-.main-section__button-container .active {
+.main-section__button-container button {
     font-size: 22px;
+    background-image: none;
 }
 
 .main-section__button-container {
-    font-size: 20px;
+    width: fit-content;
 }
 
 .main-section__image {
@@ -193,6 +220,9 @@ section {
 
 .menu-section__navigation-button {
     font-size: 22px;
+    border-radius: 16px;
+    padding: 12px 52px 8px;
+    box-shadow: 0 10px 40px 0 rgba(255, 107, 0, 0.2);
 }
 
 .pizza-card__list {
@@ -225,20 +255,31 @@ section {
 
 .pizza-card__pizza-sizes-list {
     display: flex;
+    gap: 12px;
 }
 
-.pizza-card__button-pizza-size {
+.pizza-card__pizza-size-button {
     font-weight: 400;
     font-size: 14px;
+    border-radius: 50%;
+    padding: 24px 20px 20px;
+    border: 2px solid #A3A3A3;
 }
 
-.pizza-card__button-add-ingredients {
+.pizza-card__add-ingredients-button {
     font-weight: 400;
     font-size: 16px;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 12px 36px;
 }
 
 .pizza-card__count-container {
     display: flex;
+    gap: 8px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .pizza-card__price {
@@ -249,10 +290,15 @@ section {
 .pizza-card__button-pizza-count {
     font-weight: 400;
     font-size: 18px;
+    border-radius: 50%;
+    padding: 12px 15px 8px;
 }
 
 .pizza-card__button-order-pizza {
     font-size: 18px;
+    background-image: var(--main-gradient);
+    border-radius: 16px;
+    padding: 12px 36px 8px;
 }
 
 .popular-pizza-section__title {
@@ -310,6 +356,9 @@ section {
 }
 
 .events-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 80px 0 40px 24px;
 }
 
@@ -320,8 +369,12 @@ section {
 }
 
 .events-card__link {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 16px;
+    width: fit-content;
+    background-image: var(--main-gradient);
+    border-radius: 16px;
+    padding: 8px 80px 4px;
 }
 
 .about-us-section__container {
@@ -375,6 +428,9 @@ section {
 
 .footer__phone {
     font-size: 18px;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer__icon-container {
@@ -385,4 +441,5 @@ section {
 .footer__icon {
     width: 24px;
     height: 24px;
+    fill: var(--main-gradient);
 }
