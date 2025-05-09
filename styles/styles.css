@@ -305,6 +305,11 @@ section {
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
+    border-radius: 32px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 124px 0;
     margin-bottom: 28px;
 }
@@ -355,7 +360,45 @@ section {
     align-self: end;
 }
 
+.events-section__how-we-cooking-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
+    background-position: center;
+}
+
+.events-section__our-blog-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/woman-takes-a-slice-of-pizza-from-the-frying-pan.webp);
+    background-position: center;
+}
+
+.events-section__two-pizza-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/woman-eating-a-slice-of-pizza-at-the-table.webp);
+    background-position: top;
+}
+
+.events-section__kitchen-tour-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/dish-on-a-plate.webp);
+    background-position: center 60%;
+}
+
+.events-section__free-coffee-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/top-view-of-pizza-with-sausages-on-a-wooden-table.webp);
+    background-position: top;
+}
+
+.events-section__instagram-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/man-and-a-woman-are-eating-something-from-a-jar.webp);
+    background-position: center;
+}
+
+.events-section__where-choose-us-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/slice-of-sausage-pizza-with-stringy-cheese.webp);
+    background-position: center;
+}
+
 .events-card {
+    border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
