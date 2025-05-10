@@ -20,7 +20,13 @@
 }
 
 :root {
-    --main-gradient: linear-gradient(to right, #FE9C1C 0%, #FE9C1C 35%, #FF5D29 100%);
+    --main-gradient: linear-gradient(to left, #FE7A0E 0%, #FE7A0E 35%, #FF6659 100%);
+    --light-text-color: #faf6f6;
+    --middle-dark-text-color: #878686;
+    --dark-text-color: #515151;
+    --dark-text-color-new: #312A2A;
+    --background-color-footer: #eef2d3;
+    --color-brand: #f57710;
 }
 
 * {
@@ -36,6 +42,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     max-width: 1500px;
+    color: var(--middle-dark-text-color);
     margin: 0 auto;
 }
 
@@ -53,15 +60,24 @@ button {
     font-weight: 500;
     border: none;
     background-color: transparent;
+    color: var(--light-text-color);
 }
 
 button.active {
     border: none;
+    background-image: var(--main-gradient);
+    box-shadow: 0 10px 40px 0 rgba(255, 107, 0, 0.2);
+}
+
+button.not-active {
+    color: var(--middle-dark-text-color);
+    border: 2px solid var(--color-brand);
 }
 
 a {
     text-decoration: none;
     display: inline-block;
+    color: var(--color-brand);
 }
 
 ul,
@@ -72,27 +88,31 @@ ol {
 h1 {
     font-weight: 800;
     line-height: 1;
+    color: var(--dark-text-color-new);
 }
 
 h2 {
     font-weight: 800;
     font-size: 42px;
     line-height: 1.2;
+    color: var(--dark-text-color-new);
 }
 
 h3 {
     font-weight: 500;
     font-size: 26px;
     line-height: 1.1;
+    color: var(--dark-text-color-new);
 }
 
 h4 {
     font-weight: 400;
     font-size: 18px;
+    color: var(--dark-text-color);
 }
 
-.active {
-    background-image: var(--main-gradient);
+.accent-text {
+    color: var(--color-brand);
 }
 
 .logo {
@@ -142,6 +162,7 @@ h4 {
 .header-icon {
     width: 24px;
     height: 24px;
+    fill: var(--light-text-color);
 }
 
 section {
@@ -222,7 +243,6 @@ section {
     font-size: 22px;
     border-radius: 16px;
     padding: 12px 52px 8px;
-    box-shadow: 0 10px 40px 0 rgba(255, 107, 0, 0.2);
 }
 
 .pizza-card__list {
@@ -263,7 +283,6 @@ section {
     font-size: 14px;
     border-radius: 50%;
     padding: 24px 20px 20px;
-    border: 2px solid #A3A3A3;
 }
 
 .pizza-card__add-ingredients-button {
@@ -285,6 +304,7 @@ section {
 .pizza-card__price {
     font-weight: 500;
     font-size: 24px;
+    color: var(--dark-text-color);
 }
 
 .pizza-card__button-pizza-count {
@@ -310,6 +330,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: var(--light-text-color);
     padding: 124px 0;
     margin-bottom: 28px;
 }
@@ -407,6 +428,7 @@ section {
 
 .events-card__title {
     text-transform: uppercase;
+    color: var(--light-text-color);
     max-width: 200px;
     margin-bottom: 32px;
 }
@@ -415,6 +437,7 @@ section {
     font-weight: 500;
     font-size: 16px;
     width: fit-content;
+    color: var(--light-text-color);
     background-image: var(--main-gradient);
     border-radius: 16px;
     padding: 8px 80px 4px;
@@ -450,6 +473,10 @@ section {
     height: 390px;
 }
 
+.footer {
+    background-color: var(--background-color-footer);
+}
+
 .footer__navigation {
     display: flex;
     gap: 24px;
@@ -462,6 +489,10 @@ section {
 
 .footer__navigation-column {
     flex-grow: 1;
+}
+
+.footer__navigation-column a {
+    color: var(--middle-dark-text-color);
 }
 
 .footer__address {
