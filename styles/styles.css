@@ -41,8 +41,12 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
-    max-width: 1500px;
     color: var(--middle-dark-text-color);
+}
+
+header,
+main {
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -648,6 +652,11 @@ section {
     padding: 16px 0 8px;
 }
 
+.footer .container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .footer__navigation {
     display: flex;
     gap: 24px;
@@ -702,4 +711,26 @@ section {
     width: 24px;
     height: 24px;
     fill: var(--main-gradient);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 500px;
+    height: 500px;
+    background-color: var(--light-text-color);
+    border-radius: 32px;
 }
