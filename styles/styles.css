@@ -44,7 +44,6 @@ body {
     max-width: 1500px;
     color: var(--middle-dark-text-color);
     margin: 0 auto;
-    overflow-x: hidden;
 }
 
 img,
@@ -261,16 +260,29 @@ section {
     position: relative;
 }
 
+.main-section__image-wrapper::before,
 .main-section__image-wrapper::after {
     content: '';
     position: absolute;
-    top: -100px;
-    right: -100px;
-    background-image: url(../images/decore-images/slice-of-pizza.webp);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 230px;
-    height: 230px;
+}
+
+.main-section__image-wrapper::before {
+    bottom: -40px;
+    left: -80px;
+    background-image: url(../images/decore-images/french-fries.webp);
+    width: 130px;
+    height: 150px;
+    transform: rotate(-20deg);
+}
+
+.main-section__image-wrapper::after {
+    top: -30px;
+    right: -80px;
+    background-image: url(../images/decore-images/slice-of-pizza.webp);
+    width: 170px;
+    height: 120px;
 }
 
 .main-section__image {
@@ -302,7 +314,7 @@ section {
 
 .pizza-card__list {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);    
     justify-items: center;
     column-gap: 22px; 
     row-gap: 32px;
@@ -439,10 +451,30 @@ section {
     align-self: end;
 }
 
+.events-section__how-we-cooking-card::before,
+.events-section__kitchen-tour-card::after,
+.events-section__free-coffee-card::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .events-section__how-we-cooking-card {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
     background-position: center;
 }
+
+.events-section__how-we-cooking-card::before {
+    bottom: -80px;
+    left: -80px;
+    background-image: url(../images/decore-images/egg-and-bacon.webp);
+    width: 130px;
+    height: 150px;
+    transform: rotate(-20deg);
+}
+ 
 
 .events-section__our-blog-card {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/woman-takes-a-slice-of-pizza-from-the-frying-pan.webp);
@@ -455,13 +487,32 @@ section {
 }
 
 .events-section__kitchen-tour-card {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/dish-on-a-plate.webp);
     background-position: center 60%;
 }
 
+.events-section__kitchen-tour-card::after {
+    bottom: 40px;
+    right: -60px;
+    background-image: url(../images/decore-images/shawarma.webp);
+    width: 160px;
+    height: 180px;
+    transform: scaleX(-1) rotate(20deg);
+}
+
 .events-section__free-coffee-card {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/top-view-of-pizza-with-sausages-on-a-wooden-table.webp);
     background-position: top;
+}
+
+.events-section__free-coffee-card::before {
+    bottom: -30px;
+    left: -80px;
+    background-image: url(../images/decore-images/cofee.webp);
+    width: 120px;
+    height: 120px;
 }
 
 .events-section__instagram-card {
@@ -502,6 +553,10 @@ section {
     padding: 8px 80px 4px;
 }
 
+.about-us-section {
+    padding-bottom: 40px;
+}
+
 .about-us-section__container {
     display: flex;
     justify-content: space-between;
@@ -515,16 +570,72 @@ section {
 }
 
 .about-us-section__text {
-    max-width: 430px;
+    max-width: 440px;
 }
 
 .about-us-section__decor-pizza-container-image {
+    position: relative;
     display: flex;
+    margin-top: 16px;
+}
+
+.about-us-section__decor-pizza-container-image::before,
+.about-us-section__decor-pizza-container-image::after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 6px 24px 0px var(--dark-text-color-new);
+}
+
+.about-us-section__decor-pizza-container-image::before {
+    left: 70px;
+    background-image: url(../images/mushroom-pizza.webp);
+    width: 140px;
+    height: 140px;
+}
+
+.about-us-section__decor-pizza-container-image::after {
+    right: 70px;
+    background-image: url(../images/tomato-pizza.webp);
+    width: 136px;
+    height: 138px;
 }
 
 .about-us-section__decor-pizza-image {
     width: 146px;
     height: 146px;
+}
+
+.about-us-section__main-image-wrapper {
+    position: relative;
+}
+
+.about-us-section__main-image-wrapper::before,
+.about-us-section__main-image-wrapper::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about-us-section__main-image-wrapper::before {
+    bottom: -30px;
+    left: -50px;
+    background-image: url(../images/decore-images/french-fries.webp);
+    width: 120px;
+    height: 140px;
+    transform: rotate(-20deg);
+}
+
+.about-us-section__main-image-wrapper::after {
+    top: -30px;
+    right: -60px;
+    background-image: url(../images/decore-images/slice-of-pizza.webp);
+    width: 150px;
+    height: 104px;
 }
 
 .about-us-section__main-image {
@@ -534,7 +645,7 @@ section {
 
 .footer {
     background-color: var(--background-color-footer);
-    padding-top: 16px;
+    padding: 16px 0 8px;
 }
 
 .footer__navigation {
@@ -563,6 +674,10 @@ section {
 
 .footer__navigation-column a {
     color: var(--middle-dark-text-color);
+}
+
+.footer__navigation-column a:hover {
+    color: var(--color-brand);
 }
 
 .footer__address {
