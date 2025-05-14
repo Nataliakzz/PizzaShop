@@ -21,12 +21,13 @@
 
 :root {
     --main-gradient: linear-gradient(to left, #FE7A0E 0%, #FE7A0E 35%, #FF6659 100%);
-    --light-text-color: #faf6f6;
+    --lightest-color: #fefefe;
     --middle-dark-text-color: #878686;
-    --dark-text-color: #515151;
-    --dark-text-color-new: #312A2A;
-    --background-color-footer: #eef2d3;
+    --price-color: #515151;
+    --dark-text-color: #312A2A;
+    --footer-background-color: #eef2d3;
     --color-brand: #f57710;
+    --color-light-brand: #ffae6c;
 }
 
 * {
@@ -42,6 +43,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: var(--middle-dark-text-color);
+    background-color: var(--lightest-color);
 }
 
 header,
@@ -64,11 +66,10 @@ button {
     font-weight: 500;
     border: none;
     background-color: transparent;
-    color: var(--light-text-color);
+    color: var(--lightest-color);
 }
 
 button.active {
-    border: none;
     background-image: var(--main-gradient);
     box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
 }
@@ -92,21 +93,21 @@ ol {
 h1 {
     font-weight: 800;
     line-height: 1;
-    color: var(--dark-text-color-new);
+    color: var(--dark-text-color);
 }
 
 h2 {
     font-weight: 800;
     font-size: 42px;
     line-height: 1.2;
-    color: var(--dark-text-color-new);
+    color: var(--dark-text-color);
 }
 
 h3 {
     font-weight: 500;
     font-size: 26px;
     line-height: 1.1;
-    color: var(--dark-text-color-new);
+    color: var(--dark-text-color);
 }
 
 h4 {
@@ -125,6 +126,11 @@ h4 {
     background: var(--main-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: text-shadow 0.2s;
+}
+
+.logo:hover {
+    text-shadow: 0 0 16px var(--color-light-brand);
 }
 
 .container {
@@ -134,6 +140,7 @@ h4 {
 .header-container {
     display: flex;
     align-items: center;
+    padding-top: 4px;
 }
 
 .header-navigation {
@@ -154,7 +161,7 @@ h4 {
 }
 
 .header__link:hover {
-    transform: scale(1.125); /* 18px / 16px=1.125 */
+    transform: scale(1.125);
     text-shadow: 0 0 16px var(--color-brand);
 }
 
@@ -164,18 +171,26 @@ h4 {
     padding: 8px 48px;
     border-radius: 12px;
     background-image: var(--main-gradient);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header__log-in-button:hover,
+.header__cart-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 4px 0 var(--color-light-brand);
 }
 
 .header__cart-button {
     padding: 8px;
     background-image: var(--main-gradient);
     border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .header-icon {
     width: 24px;
     height: 24px;
-    fill: var(--light-text-color);
+    fill: var(--lightest-color);
 }
 
 section {
@@ -249,6 +264,11 @@ section {
     border-radius: 24px;
     border: none;
     margin-bottom: 20px;
+    transition: .5s box-shadow;
+}
+
+.main-section__video:hover {
+    box-shadow: 0 4px 12px 0 var(--color-brand);
 }
 
 .main-section__button-container button {
@@ -312,8 +332,25 @@ section {
 
 .menu-section__navigation-button {
     font-size: 22px;
+    height: 100%;
     border-radius: 16px;
     padding: 12px 52px 8px;
+    transition: 0.3s ease-in-out background-image,
+            0.3s ease-in-out box-shadow,
+            0.3s ease-in-out opacity,
+            0.3s ease-in-out transform;
+}
+
+.menu-section__navigation-button.active {
+    cursor: auto;
+}
+
+.menu-section__navigation-button.not-active:hover {
+    background-image: var(--main-gradient);
+    box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
+    color: var(--lightest-color);
+    opacity: 0.7;
+    transform: scale(1.05);
 }
 
 .pizza-card__list {
@@ -357,6 +394,19 @@ section {
     font-size: 14px;
     border-radius: 50%;
     padding: 24px 20px 20px;
+    transition: 0.3s ease-in-out color,
+            0.3s ease-in-out text-shadow,
+            0.2s ease-in-out border-color,
+            0.3s ease-in-out transform;
+}
+
+.pizza-card__pizza-size-button.not-active:hover,
+.pizza-card__button-pizza-count.not-active:hover
+ {
+    color: var(--color-brand);
+    text-shadow: 0 0 16px var(--color-brand);
+    border-color: transparent;
+    transform: scale(1.3);
 }
 
 .pizza-card__add-ingredients-button {
@@ -378,7 +428,7 @@ section {
 .pizza-card__price {
     font-weight: 500;
     font-size: 24px;
-    color: var(--dark-text-color);
+    color: var(--price-color);
 }
 
 .pizza-card__button-pizza-count {
@@ -386,6 +436,10 @@ section {
     font-size: 18px;
     border-radius: 50%;
     padding: 12px 15px 8px;
+    transition: 0.3s ease-in-out color,
+            0.3s ease-in-out text-shadow,
+            0.2s ease-in-out border-color,
+            0.3s ease-in-out transform;
 }
 
 .pizza-card__button-order-pizza {
@@ -404,7 +458,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--light-text-color);
+    color: var(--lightest-color);
     padding: 124px 0;
     margin-bottom: 32px;
 }
@@ -542,7 +596,7 @@ section {
 
 .events-card__title {
     text-transform: uppercase;
-    color: var(--light-text-color);
+    color: var(--lightest-color);
     max-width: 200px;
     margin-bottom: 32px;
 }
@@ -551,7 +605,7 @@ section {
     font-weight: 500;
     font-size: 16px;
     width: fit-content;
-    color: var(--light-text-color);
+    color: var(--lightest-color);
     background-image: var(--main-gradient);
     border-radius: 16px;
     padding: 8px 80px 4px;
@@ -591,7 +645,7 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 50%;
-    box-shadow: 0 6px 24px 0px var(--dark-text-color-new);
+    box-shadow: 0 6px 24px 0px var(--dark-text-color);
 }
 
 .about-us-section__decor-pizza-container-image::before {
@@ -648,7 +702,7 @@ section {
 }
 
 .footer {
-    background-color: var(--background-color-footer);
+    background-color: var(--footer-background-color);
     padding: 16px 0 8px;
 }
 
@@ -731,6 +785,6 @@ section {
 .modal {
     width: 500px;
     height: 500px;
-    background-color: var(--light-text-color);
+    background-color: var(--lightest-color);
     border-radius: 32px;
 }
