@@ -1498,7 +1498,37 @@
     </footer>
 
     <div class="backdrop">
-      <div class="modal"></div>
+      <div class="registration-modal">
+        <button class="registration-modal__close-button" type="button">
+          +
+        </button>
+        <h2 class="registration-modal__title">Login</h2>
+        <p class="registration-modal__text">
+          Register an account to place an order
+        </p>
+        <form
+          class="registration-modal-form"
+          name="register-form"
+          autocomplete="on"
+        >
+          <label for="user-name">Name</label>
+          <input type="text" id="user-name" name="user-name" required />
+          <label for="phone-number">Phone number</label>
+          <input type="tel" id="phone-number" name="phone-number" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <label for="checkbox">
+            <input type="checkbox" id="checkbox" name="checkbox" required />
+            I agree to the processing of personal data
+          </label>
+          <button type="submit">To register</button>
+          <p class="registration-modal__text">
+            By clicking the button I agree to the <a href="#">privacy policy</a>
+          </p>
+        </form>
+      </div>
     </div>
   </body>
 </html>

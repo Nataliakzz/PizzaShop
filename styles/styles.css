@@ -851,14 +851,47 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    /*opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    pointer-events: none;*/
 }
 
-.modal {
+.registration-modal {
+    position: relative;
     width: 500px;
-    height: 500px;
+    height: 80%;
     background-color: var(--lightest-color);
     border-radius: 32px;
+    padding: 48px;
+}
+
+.registration-modal__close-button {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--color-brand);
+    transform: rotate(45deg);
+    transition: .2s transform,
+                .2s text-shadow;
+}
+
+.registration-modal__close-button:hover {
+    transform: rotate(45deg) scale(1.15);
+    text-shadow: 0 0 4px var(--color-light-brand);
+}
+
+.registration-modal__title {
+    text-align: center;
+}
+
+.registration-modal__text {
+    text-align: center;
+}
+
+.registration-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
