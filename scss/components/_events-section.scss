@@ -1,0 +1,70 @@
+.events-section__how-we-cooking-card::before,
+.events-section__kitchen-tour-card::after,
+.events-section__free-coffee-card::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.events-section__how-we-cooking-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
+  background-position: center;
+}
+
+.events-section__how-we-cooking-card::before {
+  background-image: url(../images/decore-images/egg-and-bacon.webp);
+  width: 130px;
+  height: 150px;
+  transform: rotate(-20deg);
+}
+
+.events-section__our-blog-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/woman-takes-a-slice-of-pizza-from-the-frying-pan.webp);
+  background-position: center;
+}
+
+.events-section__two-pizza-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/woman-eating-a-slice-of-pizza-at-the-table.webp);
+  background-position: top;
+}
+
+.events-section__kitchen-tour-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/dish-on-a-plate.webp);
+  background-position: center 60%;
+}
+
+.events-section__kitchen-tour-card::after {
+  background-image: url(../images/decore-images/shawarma.webp);
+  width: 160px;
+  height: 180px;
+  transform: scaleX(-1) rotate(20deg);
+}
+
+.events-section__free-coffee-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/top-view-of-pizza-with-sausages-on-a-wooden-table.webp);
+  background-position: top;
+}
+
+.events-section__free-coffee-card::before {
+  background-image: url(../images/decore-images/cofee.webp);
+  width: 120px;
+  height: 120px;
+}
+
+.events-section__instagram-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/man-and-a-woman-are-eating-something-from-a-jar.webp);
+  background-position: center;
+}
+
+.events-section__where-choose-us-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/slice-of-sausage-pizza-with-stringy-cheese.webp);
+  background-position: center;
+}

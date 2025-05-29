@@ -1,0 +1,76 @@
+.main-section__content__container::after {
+  content: "";
+  background-image: url(../images/decore-images/big-arrow.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 130px;
+  height: 130px;
+}
+
+.main-section__title {
+  font-size: 70px;
+}
+
+.main-section__title::after {
+  content: "";
+  background-image: url(../images/decore-images/small-arrow.webp);
+  background-repeat: no-repeat;
+  width: 104px;
+  height: 40px;
+}
+
+.main-section__title-image {
+  width: 80px;
+  height: 84px;
+}
+
+.main-section__main-text--accent {
+  color: var(--color-brand);
+}
+
+.main-section__video {
+  height: 350px;
+  width: 450px;
+  border-radius: 24px;
+  border: none;
+  transition: 0.5s box-shadow;
+}
+
+.main-section__video:hover {
+  box-shadow: 0 4px 12px 0 var(--color-brand);
+}
+
+.main-section__button-container button {
+  font-size: 22px;
+  background-image: none;
+}
+
+.main-section__button-container {
+  width: fit-content;
+}
+
+.main-section__image-wrapper::before,
+.main-section__image-wrapper::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main-section__image-wrapper::before {
+  background-image: url(../images/decore-images/french-fries.webp);
+  width: 130px;
+  height: 150px;
+  transform: rotate(-20deg);
+}
+
+.main-section__image-wrapper::after {
+  background-image: url(../images/decore-images/slice-of-pizza.webp);
+  width: 170px;
+  height: 120px;
+}
+
+.main-section__image {
+  width: 450px;
+  height: 664px;
+  border-radius: 46px;
+}

@@ -1,0 +1,31 @@
+.events-card {
+  box-shadow: 0 0 16px 0px #bfbcbc;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s box-shadow;
+}
+
+.events-card:hover {
+  box-shadow: 0 0 16px 0px #676666;
+}
+
+.events-card__title {
+  text-transform: uppercase;
+  color: var(--lightest-color);
+}
+
+.events-card__link {
+  font-weight: 500;
+  font-size: 16px;
+  width: fit-content;
+  color: var(--lightest-color);
+  background-image: var(--main-gradient);
+  border-radius: 16px;
+  transition: 0.2s ease-in-out transform, 0.2s ease-in-out box-shadow;
+}
+
+.events-card__link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 4px 0 var(--color-brand);
+}

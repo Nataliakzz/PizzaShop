@@ -1,0 +1,12 @@
+.logo {
+  font-weight: 800;
+  font-size: 34px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: text-shadow 0.2s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 16px var(--color-light-brand);
+}

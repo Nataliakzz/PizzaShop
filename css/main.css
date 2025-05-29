@@ -1,0 +1,1133 @@
+@font-face {
+  font-display: swap;
+  font-family: "Muller";
+  font-weight: 400;
+  src: url("../fonts/MullerRegular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Muller";
+  font-weight: 500;
+  src: url("../fonts/MullerMedium.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Muller";
+  font-weight: 800;
+  src: url("../fonts/MullerExtraBold.woff2") format("woff2");
+}
+:root {
+  --main-gradient: linear-gradient(
+    to left,
+    #fe7a0e 0%,
+    #fe7a0e 35%,
+    #ff6659 100%
+  );
+  --lightest-color: #fefefe;
+  --middle-dark-text-color: #878686;
+  --price-color: #515151;
+  --dark-text-color: #312a2a;
+  --footer-background-color: #eef2d3;
+  --color-brand: #f57710;
+  --color-light-brand: #ffae6c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Muller";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--middle-dark-text-color);
+  background-color: var(--lightest-color);
+}
+
+header,
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 24px 0;
+}
+
+.container {
+  padding: 0 80px;
+}
+
+fieldset {
+  border: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Muller";
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  color: var(--lightest-color);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-brand);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1;
+  color: var(--dark-text-color);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.2;
+  color: var(--dark-text-color);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--dark-text-color);
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-text-color);
+}
+
+.about-us-section__decor-pizza-container-image::before,
+.about-us-section__decor-pizza-container-image::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px 0px var(--dark-text-color);
+}
+
+.about-us-section__decor-pizza-container-image::before {
+  background-image: url(../images/mushroom-pizza.webp);
+  width: 140px;
+  height: 140px;
+}
+
+.about-us-section__decor-pizza-container-image::after {
+  background-image: url(../images/tomato-pizza.webp);
+  width: 136px;
+  height: 138px;
+}
+
+.about-us-section__decor-pizza-image {
+  width: 146px;
+  height: 146px;
+}
+
+.about-us-section__main-image-wrapper::before,
+.about-us-section__main-image-wrapper::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about-us-section__main-image-wrapper::before {
+  background-image: url(../images/decore-images/french-fries.webp);
+  width: 120px;
+  height: 140px;
+  transform: rotate(-20deg);
+}
+
+.about-us-section__main-image-wrapper::after {
+  background-image: url(../images/decore-images/slice-of-pizza.webp);
+  width: 150px;
+  height: 104px;
+}
+
+.about-us-section__main-image {
+  width: 566px;
+  height: 390px;
+}
+
+button.active {
+  background-image: var(--main-gradient);
+  box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
+}
+
+button.not-active {
+  color: var(--middle-dark-text-color);
+  border: 2px solid var(--color-brand);
+}
+
+.events-card {
+  box-shadow: 0 0 16px 0px #bfbcbc;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s box-shadow;
+}
+
+.events-card:hover {
+  box-shadow: 0 0 16px 0px #676666;
+}
+
+.events-card__title {
+  text-transform: uppercase;
+  color: var(--lightest-color);
+}
+
+.events-card__link {
+  font-weight: 500;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--lightest-color);
+  background-image: var(--main-gradient);
+  border-radius: 16px;
+  transition: 0.2s ease-in-out transform, 0.2s ease-in-out box-shadow;
+}
+
+.events-card__link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 4px 0 var(--color-brand);
+}
+
+.events-section__how-we-cooking-card::before,
+.events-section__kitchen-tour-card::after,
+.events-section__free-coffee-card::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.events-section__how-we-cooking-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
+  background-position: center;
+}
+
+.events-section__how-we-cooking-card::before {
+  background-image: url(../images/decore-images/egg-and-bacon.webp);
+  width: 130px;
+  height: 150px;
+  transform: rotate(-20deg);
+}
+
+.events-section__our-blog-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/woman-takes-a-slice-of-pizza-from-the-frying-pan.webp);
+  background-position: center;
+}
+
+.events-section__two-pizza-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/woman-eating-a-slice-of-pizza-at-the-table.webp);
+  background-position: top;
+}
+
+.events-section__kitchen-tour-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/dish-on-a-plate.webp);
+  background-position: center 60%;
+}
+
+.events-section__kitchen-tour-card::after {
+  background-image: url(../images/decore-images/shawarma.webp);
+  width: 160px;
+  height: 180px;
+  transform: scaleX(-1) rotate(20deg);
+}
+
+.events-section__free-coffee-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/top-view-of-pizza-with-sausages-on-a-wooden-table.webp);
+  background-position: top;
+}
+
+.events-section__free-coffee-card::before {
+  background-image: url(../images/decore-images/cofee.webp);
+  width: 120px;
+  height: 120px;
+}
+
+.events-section__instagram-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/man-and-a-woman-are-eating-something-from-a-jar.webp);
+  background-position: center;
+}
+
+.events-section__where-choose-us-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/slice-of-sausage-pizza-with-stringy-cheese.webp);
+  background-position: center;
+}
+
+.footer {
+  background-color: var(--footer-background-color);
+}
+
+.footer__navigation-column a {
+  color: var(--middle-dark-text-color);
+  transition: 0.3s color, 0.3s transform, 0.3s text-shadow;
+}
+
+.footer__navigation-column a:hover {
+  color: var(--color-brand);
+  transform: scale(1.05);
+  text-shadow: 0 0 4px var(--color-light-brand);
+}
+
+.footer__phone {
+  font-size: 18px;
+  font-style: normal;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s transform, 0.3s text-shadow;
+}
+
+.footer__phone:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 4px var(--color-light-brand);
+}
+
+.footer__icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-gradient);
+  transition: 0.3s transform;
+}
+
+.footer__icon:hover {
+  transform: scale(1.15);
+}
+
+.header-navigation-list {
+  font-size: 16px;
+}
+
+.header__link {
+  transition: transform 0.2s, text-shadow 0.2s;
+}
+
+.header__link:hover {
+  transform: scale(1.125);
+  text-shadow: 0 0 16px var(--color-brand);
+}
+
+.header__log-in-button {
+  font-size: 16px;
+  border-radius: 12px;
+  background-image: var(--main-gradient);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header__log-in-button:hover,
+.header__cart-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 4px 0 var(--color-light-brand);
+}
+
+.header__cart-button {
+  background-image: var(--main-gradient);
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--lightest-color);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 34px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: text-shadow 0.2s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 16px var(--color-light-brand);
+}
+
+.main-section__content__container::after {
+  content: "";
+  background-image: url(../images/decore-images/big-arrow.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 130px;
+  height: 130px;
+}
+
+.main-section__title {
+  font-size: 70px;
+}
+
+.main-section__title::after {
+  content: "";
+  background-image: url(../images/decore-images/small-arrow.webp);
+  background-repeat: no-repeat;
+  width: 104px;
+  height: 40px;
+}
+
+.main-section__title-image {
+  width: 80px;
+  height: 84px;
+}
+
+.main-section__main-text--accent {
+  color: var(--color-brand);
+}
+
+.main-section__video {
+  height: 350px;
+  width: 450px;
+  border-radius: 24px;
+  border: none;
+  transition: 0.5s box-shadow;
+}
+
+.main-section__video:hover {
+  box-shadow: 0 4px 12px 0 var(--color-brand);
+}
+
+.main-section__button-container button {
+  font-size: 22px;
+  background-image: none;
+}
+
+.main-section__button-container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-section__image-wrapper::before,
+.main-section__image-wrapper::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main-section__image-wrapper::before {
+  background-image: url(../images/decore-images/french-fries.webp);
+  width: 130px;
+  height: 150px;
+  transform: rotate(-20deg);
+}
+
+.main-section__image-wrapper::after {
+  background-image: url(../images/decore-images/slice-of-pizza.webp);
+  width: 170px;
+  height: 120px;
+}
+
+.main-section__image {
+  width: 450px;
+  height: 664px;
+  border-radius: 46px;
+}
+
+.menu-section__navigation-button {
+  font-size: 22px;
+  height: 100%;
+  border-radius: 16px;
+  transition: 0.3s ease-in-out background-image, 0.3s ease-in-out box-shadow, 0.3s ease-in-out opacity, 0.3s ease-in-out transform;
+}
+
+.menu-section__navigation-button.active {
+  cursor: auto;
+}
+
+.menu-section__navigation-button.not-active:hover {
+  background-image: var(--main-gradient);
+  box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
+  color: var(--lightest-color);
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.pizza-card__item {
+  width: 300px;
+  box-shadow: 0 0 16px 0px #bfbcbc;
+  border-radius: 16px;
+  transition: 0.3s box-shadow;
+}
+
+.pizza-card__item:hover {
+  box-shadow: 0 0 16px 0px #adaaaa;
+}
+
+.pizza-card__item article {
+  height: 100%;
+}
+
+.pizza-card__image {
+  width: 160px;
+  height: 158px;
+}
+
+.pizza-card__pizza-size-button {
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out color, 0.3s ease-in-out text-shadow, 0.2s ease-in-out border-color, 0.3s ease-in-out transform;
+}
+
+.pizza-card__pizza-size-button.active:hover {
+  cursor: auto;
+}
+
+.pizza-card__pizza-size-button.not-active:hover,
+.pizza-card__button-pizza-count.not-active:hover {
+  color: var(--color-brand);
+  text-shadow: 0 0 16px var(--color-brand);
+  border-color: transparent;
+  transform: scale(1.3);
+}
+
+.pizza-card__add-ingredients-button {
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: 0.2s ease-in-out transform, 0.2s ease-in-out border-color;
+}
+
+.pizza-card__add-ingredients-button:hover {
+  transform: scale(1.05);
+  border-color: var(--color-light-brand);
+}
+
+.pizza-card__count-container {
+  width: 100%;
+}
+
+.pizza-card__price {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--price-color);
+}
+
+.pizza-card__button-pizza-count {
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 50%;
+  color: var(--middle-dark-text-color);
+  border: 2px solid var(--color-brand);
+  transition: 0.3s ease-in-out border-color, 0.3s ease-in-out box-shadow, 0.3s ease-in-out background-color, 0.3s ease-in-out padding, 0.3s ease-in-out color, 0.3s ease-in-out font-size, 0.3s ease-in-out transform;
+}
+
+.pizza-card__button-pizza-count:hover {
+  box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
+  transform: scale(1.3);
+  border-color: transparent;
+  background-color: rgba(255, 173, 115, 0.1);
+  font-size: 24px;
+  color: var(--color-brand);
+}
+
+.pizza-card__button-order-pizza {
+  font-size: 18px;
+  background-image: var(--main-gradient);
+  border-radius: 16px;
+  transition: 0.2s ease-in-out transform, 0.2s ease-in-out box-shadow;
+}
+
+.pizza-card__button-order-pizza:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 4px 0 var(--color-light-brand);
+}
+
+.popular-pizza-section__title {
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 32px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--lightest-color);
+}
+
+.registration-modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  /*opacity: 0;
+  visibility: hidden;
+  pointer-events: none;*/
+}
+
+.registration-modal {
+  width: 500px;
+  height: 80%;
+  background-color: var(--lightest-color);
+  border-radius: 32px;
+}
+
+.registration-modal__close-button {
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--color-brand);
+  transform: rotate(45deg);
+  transition: 0.2s transform, 0.2s text-shadow;
+}
+
+.registration-modal__close-button:hover {
+  transform: rotate(45deg) scale(1.15);
+  text-shadow: 0 0 4px var(--color-light-brand);
+}
+
+.registration-modal-form__input {
+  border: 2px solid var(--middle-dark-text-color);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.registration-modal-form__input:focus {
+  border-color: var(--color-light-brand);
+}
+
+.registration-modal-form__input:valid {
+  border-color: #8cdd70;
+}
+
+.registration-modal-form__checkbox-container {
+  color: var(--price-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.registration-modal-form__checkbox-container::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+}
+
+.registration-modal-form__checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.registration-modal-form__checkbox:checked + .registration-modal-form__checkbox-container::before {
+  background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.registration-modal-form__checkbox:checked + .registration-modal-form__checkbox-container {
+  color: #82c86b;
+}
+
+.registration-modal-form__submit-button {
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 12px;
+  background-image: var(--main-gradient);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.registration-modal-form__submit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 4px 0 var(--color-light-brand);
+}
+
+.registration-modal__link {
+  transition: text-shadow 0.2s;
+}
+
+.registration-modal__link:hover {
+  text-shadow: 0 0 8px var(--color-light-brand);
+}
+
+.about-us-section {
+  padding-bottom: 40px;
+}
+
+.about-us-section__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-section__content__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.about-us-section__text {
+  max-width: 440px;
+}
+
+.about-us-section__decor-pizza-container-image {
+  position: relative;
+  display: flex;
+  margin-top: 16px;
+}
+
+.about-us-section__decor-pizza-container-image::before,
+.about-us-section__decor-pizza-container-image::after {
+  position: absolute;
+  bottom: 30px;
+}
+
+.about-us-section__decor-pizza-container-image::before {
+  left: 70px;
+}
+
+.about-us-section__decor-pizza-container-image::after {
+  right: 70px;
+}
+
+.about-us-section__main-image-wrapper {
+  position: relative;
+}
+
+.about-us-section__main-image-wrapper::before,
+.about-us-section__main-image-wrapper::after {
+  position: absolute;
+}
+
+.about-us-section__main-image-wrapper::before {
+  bottom: -30px;
+  left: -50px;
+}
+
+.about-us-section__main-image-wrapper::after {
+  top: -30px;
+  right: -60px;
+}
+
+.events-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0 40px 24px;
+}
+
+.events-card__title {
+  max-width: 200px;
+  margin-bottom: 32px;
+}
+
+.events-card__link {
+  padding: 8px 80px 4px;
+}
+
+.events-section {
+  padding-top: 40px;
+}
+
+.events-section__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 24px;
+  grid-template-areas: "card2  card2  card3  card3  title  title" "card4  card4  card4  card5  card5  card5" "card6  card6  card7  card7  card8  card8";
+}
+
+.events-section__container > :nth-child(1) {
+  grid-area: title;
+}
+
+.events-section__container > :nth-child(2) {
+  grid-area: card2;
+}
+
+.events-section__container > :nth-child(3) {
+  grid-area: card3;
+}
+
+.events-section__container > :nth-child(4) {
+  grid-area: card4;
+}
+
+.events-section__container > :nth-child(5) {
+  grid-area: card5;
+}
+
+.events-section__container > :nth-child(6) {
+  grid-area: card6;
+}
+
+.events-section__container > :nth-child(7) {
+  grid-area: card7;
+}
+
+.events-section__container > :nth-child(8) {
+  grid-area: card8;
+}
+
+.events-section__title-container {
+  text-align: end;
+  max-width: 330px;
+  justify-self: end;
+  align-self: end;
+}
+
+.events-section__how-we-cooking-card {
+  position: relative;
+}
+
+.events-section__how-we-cooking-card::before {
+  bottom: -80px;
+  left: -86px;
+}
+
+.events-section__kitchen-tour-card {
+  position: relative;
+}
+
+.events-section__kitchen-tour-card::after {
+  bottom: 40px;
+  right: -60px;
+}
+
+.events-section__free-coffee-card {
+  position: relative;
+}
+
+.events-section__free-coffee-card::before {
+  bottom: -30px;
+  left: -86px;
+}
+
+.footer {
+  padding: 16px 0 8px;
+}
+
+.footer .container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.footer__navigation {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.footer__navigation .logo {
+  flex-grow: 0.5;
+}
+
+.footer__navigation-column {
+  flex-grow: 1;
+}
+
+.footer__navigation-title {
+  margin-bottom: 8px;
+}
+
+.footer__navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__address {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__icon-container {
+  display: flex;
+  gap: 12px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.header-navigation {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.header-navigation-list {
+  display: flex;
+  gap: 70px;
+  margin: 0 auto;
+}
+
+.header__log-in-button {
+  margin-right: 24px;
+  padding: 8px 48px;
+}
+
+.header__cart-button {
+  padding: 8px;
+}
+
+.main-section {
+  padding-top: 36px;
+}
+
+.main-section__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.main-section__content__container {
+  position: relative;
+  align-self: center;
+}
+
+.main-section__content__container::after {
+  position: absolute;
+  bottom: -60px;
+  right: -70px;
+}
+
+.main-section__title {
+  position: relative;
+}
+
+.main-section__title::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.main-section__title div {
+  display: flex;
+}
+
+.main-section__main-text {
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.main-section__describe-video-text {
+  margin-bottom: 4px;
+}
+
+.main-section__video {
+  margin-bottom: 20px;
+}
+
+.main-section__image-wrapper {
+  position: relative;
+}
+
+.main-section__image-wrapper::before,
+.main-section__image-wrapper::after {
+  position: absolute;
+}
+
+.main-section__image-wrapper::before {
+  bottom: -40px;
+  left: -80px;
+}
+
+.main-section__image-wrapper::after {
+  top: -30px;
+  right: -80px;
+}
+
+.menu-section__title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.menu-section__navigation {
+  margin-bottom: 36px;
+}
+
+.menu-section__navigation-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.menu-section__navigation-button {
+  padding: 12px 52px 8px;
+}
+
+.pizza-card__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+  row-gap: 32px;
+}
+
+.pizza-card__item {
+  padding: 0 8px 20px;
+}
+
+.pizza-card__item article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pizza-card__title {
+  margin-bottom: 8px;
+}
+
+.pizza-card__ingredients-list {
+  flex-grow: 1;
+}
+
+.pizza-card__pizza-sizes-list {
+  display: flex;
+  gap: 12px;
+}
+
+.pizza-card__pizza-size-button {
+  padding: 24px 20px 20px;
+}
+
+.pizza-card__add-ingredients-button {
+  padding: 12px 12px 8px;
+}
+
+.pizza-card__count-container {
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+
+.pizza-card__button-count-container {
+  display: flex;
+  gap: 12px;
+}
+
+.pizza-card__button-pizza-count {
+  padding: 8px 11px 4px;
+}
+
+.pizza-card__button-pizza-count:hover {
+  padding: 6px 10px 2px 10px;
+}
+
+.pizza-card__button-order-pizza {
+  padding: 12px 36px 8px;
+}
+
+.popular-pizza-section .pizza-card__item {
+  padding-top: 12px;
+}
+
+.popular-pizza-section__title {
+  text-align: center;
+  padding: 124px 0;
+  margin-bottom: 32px;
+}
+
+.registration-modal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 470px;
+  overflow: auto;
+  padding: 48px;
+}
+
+.registration-modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.registration-modal__title {
+  text-align: center;
+}
+
+.registration-modal__text {
+  text-align: center;
+}
+
+.registration-modal-form {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.registration-modal-form__fields {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-modal-form__input {
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.registration-modal-form__checkbox-container {
+  padding-left: 24px;
+  display: flex;
+  gap: 8px;
+  position: relative;
+  margin-top: 4px;
+}
+
+.registration-modal-form__checkbox-container::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+.registration-modal-form__checkbox:checked + .registration-modal-form__checkbox-container::before {
+  display: inline-block;
+}
+
+.registration-modal-form__submit-button {
+  padding: 12px 36px;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */
