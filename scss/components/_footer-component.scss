@@ -1,0 +1,41 @@
+.footer {
+  background-color: var(--footer-background-color);
+
+  &__navigation-column {
+    & a {
+      color: var(--middle-dark-text-color);
+      transition: 0.3s color, 0.3s transform, 0.3s text-shadow;
+
+      &:hover {
+        color: var(--color-brand);
+        transform: scale(1.05);
+        text-shadow: 0 0 4px var(--color-light-brand);
+      }
+    }
+  }
+
+  &__phone {
+    font-size: 18px;
+    font-style: normal;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s transform, 0.3s text-shadow;
+
+    &:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 4px var(--color-light-brand);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-gradient);
+    transition: 0.3s transform;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}

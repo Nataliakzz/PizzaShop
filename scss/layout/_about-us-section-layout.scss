@@ -1,0 +1,59 @@
+.about-us-section {
+  padding-bottom: 40px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  &__text {
+    max-width: 440px;
+  }
+
+  &__decor-pizza-image-container {
+    position: relative;
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 12px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 30px;
+    }
+
+    &::before {
+      left: 70px;
+    }
+
+    &::after {
+      right: 70px;
+    }
+  }
+
+  &__main-image-wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+    }
+
+    &::before {
+      bottom: -30px;
+      left: -50px;
+    }
+
+    &::after {
+      top: -30px;
+      right: -60px;
+    }
+  }
+}

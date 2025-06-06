@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Shop</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header>
-      <div class="container header-container">
-        <nav class="header-navigation" aria-label="Main navigation">
+      <div class="container header__container">
+        <nav class="header__navigation" aria-label="Main navigation">
           <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
-          <ul class="header-navigation-list">
+          <ul class="header__navigation-list">
             <li><a class="header__link" href="#">Home</a></li>
             <li><a class="header__link" href="#">Menu</a></li>
             <li><a class="header__link" href="#">Events</a></li>
@@ -24,7 +24,7 @@
           type="button"
           aria-label="Open shopping cart"
         >
-          <svg class="header-icon">
+          <svg class="header__icon">
             <use href="./images/sprite.svg#icon-shopping-cart"></use>
           </svg>
         </button>
@@ -33,7 +33,7 @@
     <main>
       <section class="main-section">
         <div class="container main-section__container">
-          <div class="main-section__content__container">
+          <div class="main-section__content-container">
             <h1 class="main-section__title">
               The Fastest<br />
               <div>
@@ -84,7 +84,7 @@
             <ul class="menu-section__navigation-list">
               <li>
                 <button
-                  class="menu-section__navigation-button active"
+                  class="menu-section__navigation-button active-button"
                   type="button"
                 >
                   Show All
@@ -92,7 +92,7 @@
               </li>
               <li>
                 <button
-                  class="menu-section__navigation-button not-active"
+                  class="menu-section__navigation-button not-active-button"
                   type="button"
                 >
                   Meat
@@ -100,7 +100,7 @@
               </li>
               <li>
                 <button
-                  class="menu-section__navigation-button not-active"
+                  class="menu-section__navigation-button not-active-button"
                   type="button"
                 >
                   Vegetarian
@@ -108,7 +108,7 @@
               </li>
               <li>
                 <button
-                  class="menu-section__navigation-button not-active"
+                  class="menu-section__navigation-button not-active-button"
                   type="button"
                 >
                   Sea products
@@ -116,7 +116,7 @@
               </li>
               <li>
                 <button
-                  class="menu-section__navigation-button not-active"
+                  class="menu-section__navigation-button not-active-button"
                   type="button"
                 >
                   Mushroom
@@ -144,7 +144,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -153,7 +153,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -162,7 +162,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -180,7 +180,7 @@
                   <p class="pizza-card__price">8,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -188,7 +188,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -196,7 +196,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -220,7 +220,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -229,7 +229,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -238,7 +238,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -256,7 +256,7 @@
                   <p class="pizza-card__price">7,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -264,7 +264,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -272,7 +272,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -296,7 +296,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -305,7 +305,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -314,7 +314,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -332,7 +332,7 @@
                   <p class="pizza-card__price">9,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -340,7 +340,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -348,7 +348,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -372,7 +372,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -381,7 +381,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -390,7 +390,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -408,7 +408,7 @@
                   <p class="pizza-card__price">6,75</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -416,7 +416,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -424,7 +424,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -448,7 +448,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -457,7 +457,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -466,7 +466,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -484,7 +484,7 @@
                   <p class="pizza-card__price">8,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -492,7 +492,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -500,7 +500,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -524,7 +524,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -533,7 +533,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -542,7 +542,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -560,7 +560,7 @@
                   <p class="pizza-card__price">7,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -568,7 +568,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -576,7 +576,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -600,7 +600,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -609,7 +609,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -618,7 +618,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -636,7 +636,7 @@
                   <p class="pizza-card__price">8,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -644,7 +644,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -652,7 +652,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -676,7 +676,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -685,7 +685,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -694,7 +694,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -712,7 +712,7 @@
                   <p class="pizza-card__price">7,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -720,7 +720,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -728,7 +728,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -752,7 +752,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -761,7 +761,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -770,7 +770,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -788,7 +788,7 @@
                   <p class="pizza-card__price">9,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -796,7 +796,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -804,7 +804,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -828,7 +828,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -837,7 +837,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -846,7 +846,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -864,7 +864,7 @@
                   <p class="pizza-card__price">6,75</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -872,7 +872,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -880,7 +880,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -911,7 +911,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -920,7 +920,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -929,7 +929,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -947,7 +947,7 @@
                   <p class="pizza-card__price">9,74</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -955,7 +955,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -963,7 +963,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -987,7 +987,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -996,7 +996,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -1005,7 +1005,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -1023,7 +1023,7 @@
                   <p class="pizza-card__price">8,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -1031,7 +1031,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -1039,7 +1039,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -1063,7 +1063,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -1072,7 +1072,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -1081,7 +1081,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -1099,7 +1099,7 @@
                   <p class="pizza-card__price">8,75</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -1107,7 +1107,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -1115,7 +1115,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -1139,7 +1139,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -1148,7 +1148,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -1157,7 +1157,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -1175,7 +1175,7 @@
                   <p class="pizza-card__price">11,59</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -1183,7 +1183,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -1191,7 +1191,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -1215,7 +1215,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -1224,7 +1224,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -1233,7 +1233,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -1251,7 +1251,7 @@
                   <p class="pizza-card__price">9,74</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -1259,7 +1259,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -1267,7 +1267,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -1291,7 +1291,7 @@
                 >
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="22 centimeters"
                     >
@@ -1300,7 +1300,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button active"
+                      class="pizza-card__pizza-size-button active-button"
                       type="button"
                       aria-label="28 centimeters"
                     >
@@ -1309,7 +1309,7 @@
                   </li>
                   <li>
                     <button
-                      class="pizza-card__pizza-size-button not-active"
+                      class="pizza-card__pizza-size-button not-active-button"
                       type="button"
                       aria-label="33 centimeters"
                     >
@@ -1327,7 +1327,7 @@
                   <p class="pizza-card__price">8,35</p>
                   <div class="pizza-card__button-count-container">
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Remove one pizza"
                     >
@@ -1335,7 +1335,7 @@
                     </button>
                     <input type="number" min="1" max="10" step="1" />
                     <button
-                      class="pizza-card__button-pizza-count"
+                      class="pizza-card__pizza-count-button"
                       type="button"
                       aria-label="Add one pizza"
                     >
@@ -1343,7 +1343,7 @@
                     </button>
                   </div>
                 </div>
-                <button class="pizza-card__button-order-pizza" type="button">
+                <button class="pizza-card__order-pizza-button" type="button">
                   Order Now
                 </button>
               </article>
@@ -1399,7 +1399,7 @@
               cities: Kyiv, Chernivtsi, Kharkiv, Sumy, Irpin, and in the future
               we plan to develop the network in other large cities of Ukraine.
             </p>
-            <div class="about-us-section__decor-pizza-container-image">
+            <div class="about-us-section__decor-pizza-image-container">
               <img
                 class="about-us-section__decor-pizza-image"
                 src="./images/argentinian-pizza.webp"
@@ -1439,7 +1439,9 @@
     <footer class="footer">
       <div class="container">
         <nav class="footer__navigation">
-          <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
+          <div class="footer__logo-container">
+            <a class="logo" href="/" aria-label="Go to homepage">pizzashop</a>
+          </div>
           <div class="footer__navigation-column">
             <h4 class="footer__navigation-title">Home</h4>
             <ul class="footer__navigation-list">

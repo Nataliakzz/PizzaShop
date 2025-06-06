@@ -1,0 +1,56 @@
+.about-us-section {
+  &__decor-pizza-image-container {
+    &::before,
+    &::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 50%;
+      box-shadow: 0 6px 24px 0px var(--dark-text-color);
+    }
+
+    &::before {
+      background-image: url(../images/mushroom-pizza.webp);
+      width: 140px;
+      height: 140px;
+    }
+
+    &::after {
+      background-image: url(../images/tomato-pizza.webp);
+      width: 136px;
+      height: 138px;
+    }
+  }
+
+  &__decor-pizza-image {
+    width: 146px;
+    height: 146px;
+  }
+
+  &__main-image-wrapper {
+    ::before,
+    ::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-image: url(../images/decore-images/french-fries.webp);
+      width: 120px;
+      height: 140px;
+      transform: rotate(-20deg);
+    }
+
+    &::after {
+      background-image: url(../images/decore-images/slice-of-pizza.webp);
+      width: 150px;
+      height: 104px;
+    }
+  }
+
+  &__main-image {
+    width: 566px;
+    height: 390px;
+  }
+}

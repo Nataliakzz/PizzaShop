@@ -3,13 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 80px 0 40px 24px;
-}
 
-.events-card__title {
-  max-width: 200px;
-  margin-bottom: 32px;
-}
+  &__title {
+    max-width: 200px;
+    margin-bottom: 32px;
+  }
 
-.events-card__link {
-  padding: 8px 80px 4px;
+  &__link {
+    padding: 8px 80px 4px;
+  }
 }

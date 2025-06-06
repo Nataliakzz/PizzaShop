@@ -1,0 +1,42 @@
+.footer {
+  padding: 16px 0 8px;
+
+  & .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  &__logo-container {
+    flex-grow: 0.5;
+  }
+
+  &__navigation-column {
+    flex-grow: 1;
+  }
+
+  &__navigation-title {
+    margin-bottom: 8px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon-container {
+    display: flex;
+    gap: 12px;
+  }
+}

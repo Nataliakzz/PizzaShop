@@ -1,0 +1,28 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  &__navigation-list {
+    display: flex;
+    gap: 70px;
+    margin: 0 auto;
+  }
+
+  &__log-in-button {
+    margin-right: 24px;
+    padding: 8px 48px;
+  }
+
+  &__cart-button {
+    padding: 8px;
+  }
+}

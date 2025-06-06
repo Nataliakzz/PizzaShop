@@ -5,8 +5,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 0.2s;
-}
 
-.logo:hover {
-  text-shadow: 0 0 16px var(--color-light-brand);
+  &:hover {
+    text-shadow: 0 0 16px var(--color-light-brand);
+  }
 }

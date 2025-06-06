@@ -1,0 +1,20 @@
+.menu-section {
+  &__title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__navigation {
+    margin-bottom: 36px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__navigation-button {
+    padding: 12px 52px 8px;
+  }
+}

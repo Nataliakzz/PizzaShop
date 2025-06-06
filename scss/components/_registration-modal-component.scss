@@ -1,0 +1,92 @@
+.registration-modal {
+  width: 500px;
+  height: 80%;
+  background-color: var(--lightest-color);
+  border-radius: 32px;
+
+  &__backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    //opacity: 0; /**/
+    //visibility: hidden; /**/
+    //pointer-events: none; /**/
+  }
+
+  &__close-button {
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--color-brand);
+    transform: rotate(45deg);
+    transition: 0.2s transform, 0.2s text-shadow;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.15);
+      text-shadow: 0 0 4px var(--color-light-brand);
+    }
+  }
+}
+
+.registration-modal-form {
+  &__input {
+    border: 2px solid var(--middle-dark-text-color);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+
+    &:focus {
+      border-color: var(--color-light-brand);
+    }
+
+    &:valid {
+      border-color: #82c86b;
+    }
+  }
+
+  &__checkbox-container {
+    color: var(--price-color);
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 1px solid;
+    }
+  }
+
+  &__checkbox {
+    appearance: none;
+
+    &:checked + .registration-modal-form__checkbox-container {
+      color: #82c86b;
+
+      &::before {
+        background-image: url('../images/check.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__submit-button {
+    font-size: 16px;
+    width: fit-content;
+    border-radius: 12px;
+    background-image: var(--main-gradient);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 4px 0 var(--color-light-brand);
+    }
+  }
+
+  &__link {
+    transition: text-shadow 0.2s;
+
+    &:hover {
+      text-shadow: 0 0 8px var(--color-light-brand);
+    }
+  }
+}
