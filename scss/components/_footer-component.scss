@@ -1,16 +1,14 @@
 .footer {
   background-color: var(--footer-background-color);
 
-  &__navigation-column {
-    & a {
-      color: var(--middle-dark-text-color);
-      transition: 0.3s color, 0.3s transform, 0.3s text-shadow;
+  &__navigation-link {
+    color: var(--middle-dark-text-color);
+    transition: 0.3s color, 0.3s transform, 0.3s text-shadow;
 
-      &:hover {
-        color: var(--color-brand);
-        transform: scale(1.05);
-        text-shadow: 0 0 4px var(--color-light-brand);
-      }
+    &:hover {
+      color: var(--color-brand);
+      transform: scale(1.05);
+      text-shadow: 0 0 4px var(--color-light-brand);
     }
   }
 

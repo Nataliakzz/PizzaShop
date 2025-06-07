@@ -1,5 +1,5 @@
 .pizza-card {
-  &__item {
+  &__item-container {
     width: 300px;
     box-shadow: 0 0 16px 0px #bfbcbc;
     border-radius: 16px;
@@ -8,10 +8,10 @@
     &:hover {
       box-shadow: 0 0 16px 0px #adaaaa;
     }
+  }
 
-    & article {
-      height: 100%;
-    }
+  &__item {
+    height: 100%;
   }
 
   &__image {
