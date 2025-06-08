@@ -1,7 +1,11 @@
 @use '../utils/utils.scss' as utils;
 
 .main-section {
-  padding-top: 36px;
+  padding-top: 16px;
+
+  @media screen and (min-width: utils.$bp-mobile) {
+    padding-top: 32px;
+  }
 
   @media screen and (min-width: utils.$bp-tablet) {
     padding-top: 16px;
@@ -30,13 +34,26 @@
   }
 
   &__content-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     align-self: center;
+    padding-top: 8px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      display: block;
+      padding-top: 0;
+    }
 
     &::after {
+      display: none;
       position: absolute;
       bottom: -80px;
       right: -34px;
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        display: block;
+      }
 
       @media screen and (min-width: utils.$bp-desktop) {
         bottom: -60px;
@@ -47,9 +64,11 @@
 
   &__title {
     position: relative;
+    margin-bottom: 8px;
 
     @media screen and (min-width: utils.$bp-tablet) {
       display: none;
+      margin-bottom: 0;
     }
 
     @media screen and (min-width: utils.$bp-laptop) {
@@ -58,8 +77,18 @@
 
     &::after {
       position: absolute;
-      top: 20px;
-      right: 4px;
+      top: 8px;
+      right: 12px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        top: 12px;
+        right: 0px;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        top: 20px;
+        right: 4px;
+      }
 
       @media screen and (min-width: utils.$bp-desktop) {
         right: 20px;
@@ -99,6 +128,7 @@
   }
 
   &__video {
+    align-self: center;
     margin-bottom: 20px;
   }
 
@@ -113,8 +143,20 @@
 
     &::before {
       position: absolute;
-      bottom: 0px;
-      left: -30px;
+      bottom: -10px;
+      left: -32px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        bottom: -20px;
+        right: -32px;
+        left: auto;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        bottom: 0px;
+        left: -30px;
+        right: auto;
+      }
 
       @media screen and (min-width: utils.$bp-laptop) {
         bottom: -30px;
@@ -129,8 +171,19 @@
 
     &::after {
       position: absolute;
-      top: -30px;
-      right: -40px;
+      top: -14px;
+      right: -30px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        top: -30px;
+        left: -40px;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        top: -30px;
+        right: -40px;
+        left: auto;
+      }
 
       @media screen and (min-width: utils.$bp-laptop) {
         right: -52px;
@@ -138,6 +191,30 @@
 
       @media screen and (min-width: utils.$bp-desktop) {
         right: -80px;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      display: none;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      display: block;
+    }
+
+    &--rotate {
+      display: none;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        display: block;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        display: none;
       }
     }
   }

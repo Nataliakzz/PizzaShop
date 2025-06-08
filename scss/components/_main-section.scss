@@ -20,7 +20,15 @@
   }
 
   &__title {
-    font-size: 60px;
+    font-size: 40px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      font-size: 50px;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      font-size: 60px;
+    }
 
     @media screen and (min-width: utils.$bp-desktop) {
       font-size: 70px;
@@ -32,12 +40,27 @@
       background-repeat: no-repeat;
       width: 104px;
       height: 40px;
+      background-size: 90px;
+      width: 90px;
+      height: 32px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 104px;
+        height: 40px;
+        background-size: auto;
+      }
     }
   }
 
   &__title-image {
-    width: 68px;
-    height: 72px;
+    width: 64px;
+    height: 60px;
+    fill: var(--color-brand);
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      width: 68px;
+      height: 72px;
+    }
 
     @media screen and (min-width: utils.$bp-desktop) {
       width: 80px;
@@ -52,11 +75,16 @@
   }
 
   &__video {
-    height: 300px;
-    width: 360px;
+    height: 270px;
+    width: 330px;
     border-radius: 24px;
     border: none;
     transition: 0.5s box-shadow;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      height: 300px;
+      width: 360px;
+    }
 
     @media screen and (min-width: utils.$bp-laptop) {
       width: 440px;
@@ -79,9 +107,19 @@
       background-image: url(../images/decore-images/french-fries.webp);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 100px;
-      height: 114px;
-      transform: rotate(-20deg);
+      width: 90px;
+      height: 104px;
+      transform: rotate(-12deg) scaleX(1);
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 100px;
+        height: 114px;
+        transform: rotate(12deg) scaleX(-1);
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        transform: rotate(-20deg);
+      }
 
       @media screen and (min-width: utils.$bp-laptop) {
         width: 116px;
@@ -99,8 +137,19 @@
       background-image: url(../images/decore-images/slice-of-pizza.webp);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 116px;
-      height: 80px;
+      width: 100px;
+      height: 70px;
+      transform: scaleX(1);
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 116px;
+        height: 80px;
+        transform: scaleX(-1);
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        transform: scaleX(1);
+      }
 
       @media screen and (min-width: utils.$bp-laptop) {
         width: 140px;
@@ -131,6 +180,11 @@
     @media screen and (min-width: utils.$bp-desktop) {
       width: 450px;
       height: 664px;
+    }
+
+    &--rotate {
+      width: 382px;
+      height: 274px;
     }
   }
 }

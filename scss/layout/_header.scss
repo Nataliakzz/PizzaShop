@@ -26,6 +26,13 @@
   &__log-in-button {
     margin-right: 16px;
     padding: 8px 36px;
+    display: none;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      display: block;
+      margin-right: 24px;
+      padding: 8px 48px;
+    }
 
     @media screen and (min-width: utils.$bp-tablet) {
       margin-right: 24px;
