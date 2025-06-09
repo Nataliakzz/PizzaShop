@@ -1,45 +1,34 @@
-.pizza-card {
-  &__item-container {
-    width: 300px;
-    box-shadow: 0 0 16px 0px #bfbcbc;
-    border-radius: 16px;
-    transition: 0.3s box-shadow;
+@use '../utils/utils.scss' as utils;
 
-    &:hover {
-      box-shadow: 0 0 16px 0px #adaaaa;
+.pizza-card {
+  height: 100%;
+
+  &__image {
+    width: 150px;
+    height: 148px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      width: 160px;
+      height: 158px;
     }
   }
 
-  &__item {
-    height: 100%;
+  &__ingredients-list {
+    text-align: center;
   }
 
-  &__image {
-    width: 160px;
-    height: 158px;
+  &__pizza-sizes-list {
+    width: 90%;
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      width: auto;
+    }
   }
 
   &__pizza-size-button {
     font-weight: 400;
     font-size: 14px;
     border-radius: 50%;
-    transition: 0.3s ease-in-out color, 0.3s ease-in-out text-shadow,
-      0.2s ease-in-out border-color, 0.3s ease-in-out transform;
-
-    &.active-button {
-      &:hover {
-        cursor: auto;
-      }
-    }
-
-    &.not-active-button {
-      &:hover {
-        color: var(--color-brand);
-        text-shadow: 0 0 16px var(--color-brand);
-        border-color: transparent;
-        transform: scale(1.3);
-      }
-    }
   }
 
   &__add-ingredients-button {
@@ -60,8 +49,13 @@
 
   &__price {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1;
     color: var(--price-color);
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      font-size: 24px;
+    }
   }
 
   &__count-container {
@@ -98,15 +92,22 @@
     }
   }
 
-  &__order-pizza-button {
-    font-size: 18px;
-    background-image: var(--main-gradient);
-    border-radius: 16px;
-    transition: 0.2s ease-in-out transform, 0.2s ease-in-out box-shadow;
+  &__num-input {
+    text-align: center;
+    width: 34px;
+  }
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 4px 0 var(--color-light-brand);
+  &__order-pizza-button {
+    font-size: 14px;
+    border-radius: 12px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      font-size: 16px;
+      border-radius: 16px;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      font-size: 18px;
     }
   }
 }

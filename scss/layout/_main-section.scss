@@ -53,11 +53,18 @@
 
       @media screen and (min-width: utils.$bp-tablet) {
         display: block;
+        bottom: -42px;
+        right: 0;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        bottom: -76px;
+        right: -20px;
       }
 
       @media screen and (min-width: utils.$bp-desktop) {
-        bottom: -60px;
-        right: -70px;
+        bottom: -64px;
+        right: -40px;
       }
     }
   }
@@ -180,17 +187,17 @@
       }
 
       @media screen and (min-width: utils.$bp-tablet) {
-        top: -30px;
-        right: -40px;
+        top: -24px;
+        right: -32px;
         left: auto;
       }
 
       @media screen and (min-width: utils.$bp-laptop) {
-        right: -52px;
+        right: -40px;
       }
 
       @media screen and (min-width: utils.$bp-desktop) {
-        right: -80px;
+        right: -60px;
       }
     }
   }

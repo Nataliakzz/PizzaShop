@@ -7,9 +7,6 @@
 @use './components/events-section-component';
 @use './components/footer-component';
 @use './components/components.scss';
-@use './components/menu-section-component';
-@use './components/pizza-card-component';
-@use './components/popular-pizza-section-component';
 @use './components/registration-modal-component';
 
 @use './layout/about-us-section-layout';
@@ -17,7 +14,4 @@
 @use './layout/events-section-layout';
 @use './layout/footer-layout';
 @use './layout/layout.scss';
-@use './layout/menu-section-layout';
-@use './layout/pizza-card-layout';
-@use './layout/popular-pizza-section-layout';
 @use './layout/registration-modal-layout';

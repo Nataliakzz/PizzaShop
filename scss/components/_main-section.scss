@@ -11,10 +11,22 @@
       height: 110px;
       transform: rotate(-8deg);
 
+      @media screen and (min-width: utils.$bp-tablet) {
+        width: 70px;
+        height: 70px;
+        transform: rotate(-8deg);
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 84px;
+        height: 96px;
+        transform: rotate(-4deg);
+      }
+
       @media screen and (min-width: utils.$bp-desktop) {
-        width: 130px;
-        height: 130px;
-        transform: rotate(0deg);
+        width: 116px;
+        height: 116px;
+        transform: rotate(8deg);
       }
     }
   }

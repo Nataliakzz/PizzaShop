@@ -1,14 +1,7 @@
 @use '../utils/utils.scss' as utils;
 
 .icon-button {
-  background-image: var(--main-gradient);
   border-radius: 12px;
-  transition: transform 0.2s, box-shadow 0.2s;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 4px 0 var(--color-light-brand);
-  }
 
   &__icon {
     width: 16px;

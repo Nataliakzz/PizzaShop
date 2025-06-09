@@ -1,13 +1,25 @@
+@use '../utils/utils.scss' as utils;
+
 .popular-pizza-section {
   &__title {
     font-weight: 500;
+    font-size: 24px;
     text-transform: uppercase;
-    border-radius: 32px;
+    border-radius: 16px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--lightest-color);
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      font-size: 30px;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      font-size: 42px;
+      border-radius: 32px;
+    }
   }
 }
