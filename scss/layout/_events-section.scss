@@ -1,0 +1,161 @@
+@use '../utils/utils.scss' as utils;
+
+.events-section {
+  padding-top: 16px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 24px;
+      grid-template-areas:
+        'card2  card2  card3  card3  title  title'
+        'card4  card4  card4  card5  card5  card5'
+        'card6  card6  card7  card7  card8  card8';
+
+      & > :nth-child(1) {
+        grid-area: title;
+      }
+
+      & > :nth-child(2) {
+        grid-area: card2;
+      }
+
+      & > :nth-child(3) {
+        grid-area: card3;
+      }
+
+      & > :nth-child(4) {
+        grid-area: card4;
+      }
+
+      & > :nth-child(5) {
+        grid-area: card5;
+      }
+
+      & > :nth-child(6) {
+        grid-area: card6;
+      }
+
+      & > :nth-child(7) {
+        grid-area: card7;
+      }
+
+      & > :nth-child(8) {
+        grid-area: card8;
+      }
+    }
+  }
+
+  &__title-container {
+    display: none;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      display: block;
+      text-align: end;
+      max-width: 330px;
+      justify-self: end;
+      align-self: end;
+    }
+
+    &--outside {
+      display: block;
+      text-align: center;
+      margin-bottom: 8px;
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__how-we-cooking-card {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -24px;
+      bottom: -24px;
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        left: -30px;
+        bottom: -20px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        left: -50px;
+        bottom: -40px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        left: -50px;
+        bottom: -60px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        left: -70px;
+        bottom: -70px;
+      }
+    }
+  }
+
+  &__kitchen-tour-card {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: -16px;
+      right: -24px;
+      @media screen and (min-width: utils.$bp-tablet) {
+        bottom: 40px;
+        right: -10px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        right: -28px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        right: -56px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        right: -50px;
+      }
+    }
+  }
+
+  &__free-coffee-card {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: -10px;
+      left: -24px;
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        bottom: -20px;
+        left: -44px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        bottom: -30px;
+        left: -60px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        left: -70px;
+      }
+    }
+  }
+}

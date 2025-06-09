@@ -1,4 +1,14 @@
+@use '../utils/utils.scss' as utils;
+
 .events-section {
+  &__container {
+    max-width: 400px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      max-width: none;
+    }
+  }
+
   &__how-we-cooking-card {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(../images/cut-slice-of-pizza-on-a-triangular-spatula.webp);
@@ -9,9 +19,29 @@
       background-image: url(../images/decore-images/egg-and-bacon.webp);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 130px;
-      height: 150px;
+      width: 70px;
+      height: 80px;
       transform: rotate(-20deg);
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        width: 90px;
+        height: 100px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 104px;
+        height: 116px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 120px;
+        height: 134px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        width: 130px;
+        height: 150px;
+      }
     }
   }
 
@@ -37,9 +67,30 @@
       background-image: url(../images/decore-images/shawarma.webp);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 160px;
-      height: 180px;
-      transform: scaleX(-1) rotate(20deg);
+      width: 80px;
+      height: 90px;
+      transform: scaleX(-1);
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        width: 116px;
+        height: 130px;
+        transform: scaleX(-1) rotate(20deg);
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 130px;
+        height: 146px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 142px;
+        height: 160px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        width: 160px;
+        height: 180px;
+      }
     }
   }
 
@@ -53,8 +104,28 @@
       background-image: url(../images/decore-images/cofee.webp);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 120px;
-      height: 120px;
+      width: 70px;
+      height: 72px;
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        width: 90px;
+        height: 90px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 110px;
+        height: 110px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop-large) {
+        width: 120px;
+        height: 120px;
+      }
     }
   }
 

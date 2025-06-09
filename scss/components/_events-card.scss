@@ -1,3 +1,5 @@
+@use '../utils/utils.scss' as utils;
+
 .events-card {
   box-shadow: 0 0 16px 0px #bfbcbc;
   border-radius: 30px;
@@ -16,12 +18,16 @@
 
   &__link {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     width: fit-content;
     color: var(--lightest-color);
     background-image: var(--main-gradient);
     border-radius: 16px;
     transition: 0.2s ease-in-out transform, 0.2s ease-in-out box-shadow;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      font-size: 16px;
+    }
 
     &:hover {
       transform: scale(1.05);
