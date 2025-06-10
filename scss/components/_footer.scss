@@ -1,5 +1,15 @@
+@use '../utils/utils.scss' as utils;
+
 .footer {
   background-color: var(--footer-background-color);
+
+  &__navigation-column {
+    width: 132px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      width: auto;
+    }
+  }
 
   &__navigation-link {
     color: var(--middle-dark-text-color);
@@ -13,12 +23,22 @@
   }
 
   &__phone {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 1;
     font-style: normal;
     background: var(--main-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 0.3s transform, 0.3s text-shadow;
+    transition: 0.2s transform, 0.2s text-shadow;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      font-size: 18px;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -27,10 +47,15 @@
   }
 
   &__icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     fill: var(--main-gradient);
-    transition: 0.3s transform;
+    transition: 0.2s transform;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      width: 24px;
+      height: 24px;
+    }
 
     &:hover {
       transform: scale(1.15);

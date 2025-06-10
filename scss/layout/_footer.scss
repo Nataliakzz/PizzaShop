@@ -1,0 +1,107 @@
+@use '../utils/utils.scss' as utils;
+
+.footer {
+  padding: 8px 0 8px;
+
+  @media screen and (min-width: utils.$bp-mobile) {
+    padding: 12px 0 8px;
+  }
+
+  @media screen and (min-width: utils.$bp-laptop) {
+    padding: 16px 0 8px;
+  }
+
+  & .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      gap: 40px;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      gap: 80px;
+    }
+
+    @media screen and (min-width: utils.$bp-desktop) {
+      gap: 110px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__logo-container {
+    display: none;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      display: block;
+    }
+
+    &--output {
+      display: block;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__navigation-column-container {
+    padding-top: 8px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 12px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      padding-top: 0;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      display: flex;
+      gap: 0;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      gap: 0;
+    }
+  }
+
+  &__navigation-column {
+    flex-grow: 1;
+  }
+
+  &__navigation-title {
+    margin-bottom: 8px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__phone {
+    padding-top: 4px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      padding-top: 0;
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    gap: 12px;
+  }
+}

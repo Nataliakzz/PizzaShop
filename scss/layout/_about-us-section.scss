@@ -1,7 +1,15 @@
 @use '../utils/utils.scss' as utils;
 
 .about-us-section {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: utils.$bp-laptop) {
+    padding-bottom: 28px;
+  }
+
+  @media screen and (min-width: utils.$bp-desktop) {
+    padding-bottom: 40px;
+  }
 
   &__title {
     display: none;
