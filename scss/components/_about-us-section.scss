@@ -1,0 +1,182 @@
+@use '../utils/utils.scss' as utils;
+
+.about-us-section {
+  &__decor-pizza-image-container {
+    max-width: 330px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      max-width: none;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 50%;
+      box-shadow: 0 6px 24px 0px var(--dark-text-color);
+    }
+
+    &::before {
+      background-image: url(../images/mushroom-pizza.webp);
+      width: 104px;
+      height: 104px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 124px;
+        height: 124px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    &::after {
+      background-image: url(../images/tomato-pizza.webp);
+      width: 103px;
+      height: 104px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 124px;
+        height: 125px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 129px;
+        height: 130px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 136px;
+        height: 138px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 404px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      max-width: 392px;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      max-width: 404px;
+    }
+
+    @media screen and (min-width: utils.$bp-desktop) {
+      max-width: 440px;
+    }
+  }
+
+  &__decor-pizza-image {
+    width: 108px;
+    height: 108px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      width: 124px;
+      height: 124px;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      width: 134px;
+      height: 134px;
+    }
+
+    @media screen and (min-width: utils.$bp-desktop) {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  &__main-image-wrapper {
+    &::before,
+    &::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-image: url(../images/decore-images/french-fries.webp);
+      width: 80px;
+      height: 90px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 90px;
+        height: 100px;
+        transform: rotate(-12deg);
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        width: 100px;
+        height: 90px;
+        transform: rotate(-20deg);
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 116px;
+        height: 132px;
+        transform: rotate(-8deg);
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 126px;
+        height: 144px;
+        transform: rotate(-20deg);
+      }
+    }
+
+    &::after {
+      background-image: url(../images/decore-images/slice-of-pizza.webp);
+      width: 90px;
+      height: 62px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        width: 104px;
+        height: 70px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        width: 130px;
+        height: 90px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        width: 150px;
+        height: 104px;
+      }
+    }
+  }
+
+  &__main-image {
+    width: 300px;
+    height: 240px;
+    border-radius: 8px;
+
+    @media screen and (min-width: utils.$bp-mobile-small) {
+      width: 340px;
+    }
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      width: 300px;
+    }
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      width: 500px;
+      height: 360px;
+    }
+
+    @media screen and (min-width: utils.$bp-desktop) {
+      width: 566px;
+      height: 390px;
+    }
+  }
+}

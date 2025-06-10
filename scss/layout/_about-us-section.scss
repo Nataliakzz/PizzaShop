@@ -1,0 +1,137 @@
+@use '../utils/utils.scss' as utils;
+
+.about-us-section {
+  padding-bottom: 40px;
+
+  &__title {
+    display: none;
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      display: block;
+    }
+
+    &--outside {
+      padding-top: 8px;
+      display: block;
+      text-align: center;
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: utils.$bp-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__decor-pizza-image-container {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    margin: 40px auto 16px;
+
+    @media screen and (min-width: utils.$bp-laptop) {
+      gap: 0;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 30px;
+    }
+
+    &::before {
+      left: 54px;
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        left: 58px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        left: 70px;
+      }
+    }
+
+    &::after {
+      right: 54px;
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        right: 58px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        right: 70px;
+      }
+    }
+  }
+
+  &__main-image-wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+    }
+
+    &::before {
+      bottom: -10px;
+      left: -22px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        left: -40px;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        left: -30px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        bottom: -20px;
+        left: -36px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        bottom: -30px;
+        left: -50px;
+      }
+    }
+
+    &::after {
+      top: -20px;
+      right: -20px;
+
+      @media screen and (min-width: utils.$bp-mobile) {
+        right: -40px;
+      }
+
+      @media screen and (min-width: utils.$bp-tablet) {
+        top: -30px;
+        right: -30px;
+      }
+
+      @media screen and (min-width: utils.$bp-laptop) {
+        right: -40px;
+      }
+
+      @media screen and (min-width: utils.$bp-desktop) {
+        top: -30px;
+        right: -50px;
+      }
+    }
+  }
+}
