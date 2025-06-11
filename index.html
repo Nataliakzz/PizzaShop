@@ -1753,22 +1753,20 @@
       </div>
     </footer>
 
-    <!--<div class="registration-modal__backdrop">
-      <div class="registration-modal">
-        <button class="registration-modal__close-button" type="button">
-          +
-        </button>
-        <h2 class="registration-modal__title">Registration</h2>
-        <p class="registration-modal__text">
-          Register an account to place an order
-        </p>
+    <div class="container modal__backdrop">
+      <div class="modal">
+        <button class="button--close" type="button">+</button>
+        <h2 class="modal__title">Registration</h2>
+        <p class="modal__text">Register an account to place an order</p>
         <form
           class="registration-modal-form"
           name="register-form"
           autocomplete="on"
         >
           <fieldset class="registration-modal-form__fields">
-            <label for="user-name">Name</label>
+            <label for="user-name" class="registration-modal-form__label"
+              >Name</label
+            >
             <input
               class="registration-modal-form__input"
               type="text"
@@ -1777,7 +1775,9 @@
               pattern="^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ]{2,25}$"
               required
             />
-            <label for="phone-number">Phone number</label>
+            <label for="phone-number" class="registration-modal-form__label"
+              >Phone number</label
+            >
             <input
               class="registration-modal-form__input"
               type="tel"
@@ -1787,7 +1787,9 @@
               value="+380"
               required
             />
-            <label for="email">Email</label>
+            <label for="email" class="registration-modal-form__label"
+              >Email</label
+            >
             <input
               class="registration-modal-form__input"
               type="email"
@@ -1796,7 +1798,9 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,40}$"
               required
             />
-            <label for="password">Password</label>
+            <label for="password" class="registration-modal-form__label"
+              >Password</label
+            >
             <input
               class="registration-modal-form__input"
               type="password"
@@ -1820,15 +1824,18 @@
               I agree to the processing of personal data
             </label>
           </fieldset>
-          <button class="registration-modal-form__submit-button" type="submit">
+          <button
+            class="registration-modal-form__submit-button button--gradient button--hover"
+            type="submit"
+          >
             To register
           </button>
         </form>
-        <p class="registration-modal__text">
+        <p class="modal__text">
           By clicking the button I agree to the
-          <a class="registration-modal__link" href="#">privacy policy</a>
+          <a class="modal__link" href="#">privacy policy</a>
         </p>
       </div>
-    </div>-->
+    </div>
   </body>
 </html>

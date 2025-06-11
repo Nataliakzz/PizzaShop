@@ -1,0 +1,14 @@
+@use '../utils/utils.scss' as utils;
+
+.button {
+  &--close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+
+    @media screen and (min-width: utils.$bp-mobile) {
+      top: 16px;
+      right: 24px;
+    }
+  }
+}

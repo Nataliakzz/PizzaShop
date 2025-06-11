@@ -3,6 +3,19 @@
     background-image: var(--main-gradient);
   }
 
+  &--close {
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--color-brand);
+    transform: rotate(45deg);
+    transition: 0.2s transform, 0.2s text-shadow;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.15);
+      text-shadow: 0 0 4px var(--color-light-brand);
+    }
+  }
+
   &--active {
     background-image: var(--main-gradient);
     box-shadow: 0 0 40px 4px rgba(255, 107, 0, 0.2);
